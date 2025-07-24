@@ -11,19 +11,14 @@
       "lang": "it",
       "name": "Italiano",
       "path": "lang/it.json",
-      "flags": {}
-    }
-  ],
-  "esmodules": [],
+    }],
   "styles": [],
   "url": "https://github.com/GregoryWarn/FoundryVTTcore-IT",
-  "manifest": "https://github.com/GregoryWarn/FoundryVTTcore-IT/blob/13.346/module.json",
+  "manifest": "https://github.com/GregoryWarn/FoundryVTTcore-IT/blob/main/module.json",
   "download": "https://github.com/GregoryWarn/FoundryVTTcore-IT/archive/master.zip",
   "id": "FoundryVTTcore-IT",
   "authors": [{
-      "name": "GregoryWarn",
-      "flags": {}
+      "name": "ClaPSG",
     }],
-  "coreTranslation": true,
-  "packs": []
+  "coreTranslation": true
 }
