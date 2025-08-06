@@ -659,7 +659,7 @@
 "CONTROLS": {
 "Title": "Elenco Controlli di Gioco",
 "NavLabel": "Paletta Controlli Canvas",
-"Instructions": "Questo elenco descrive i comandi comuni della tastiera e del mouse utilizzati per controllare vari aspetti dell'ambiente Foundry Virtual Tabletop. Alcuni controlli sono disponibili solo per l'utente Game Master, evidenziati in viola chiaro.",
+"Instructions": "Questo elenco descrive i comandi comuni della tastiera e del mouse utilizzati per controllare vari aspetti dell'ambiente Foundry VTT. Alcuni controlli sono disponibili solo per l'utente Game Master, evidenziati in viola chiaro.",
 "GroupToken": "Controlli Token",
 "CommonForceSnap": "Forza l'aggancio ai vertici della griglia",
 "BasicSelect": "Seleziona Tokens",
@@ -756,7 +756,7 @@
 "ClearAll": "Cancella tutti gli Oggetti",
 "ClearAllHint": "Eliminare definitivamente tutti gli oggetti {type} da questa scena?",
 "HeaderGame": "Controlli Di Gioco Generali",
-"HeaderGameNotes": "I controlli seguenti sono generalmente applicabili nei vari aspetti delle funzionalità di Foundry.",
+"HeaderGameNotes": "I controlli seguenti sono generalmente applicabili nei vari aspetti delle funzionalità di Foundry VTT.",
 "HeaderCanvas": "Controlli Livello Area di Gioco",
 "HeaderCanvasNotes": "Questi controlli sono applicabili quando si interagisce con uno specifico livello dell'Area di Gioco",
 "HeaderObjects": "Controlli Oggetti Posizionabili",
@@ -1135,20 +1135,20 @@
 "EFFECT.StatusHolyShield": "Scudo Benedetto",
 
 "ERROR": {
-"BrowserVersion": "Foundry Virtual Tabletop utilizza funzionalità JavaScript moderne che non sono supportate per versioni di {browser} inferiori a {minimum}. Stai utilizzando {browser} versione {versione}. Aggiorna o utilizza un browser diverso.",
-"ElectronVersion": "Stai utilizzando una versione precedente del client Electron di Foundry Virtual Tabletop. Per ottenere le migliori prestazioni, ti consigliamo di scaricare nuovamente la versione desiderata di Foundry Virtual Tabletop ed eseguire una reinstallazione completa del software.",
-"NoWebGL": "Al momento il tuo browser non supporta il rendering WebGL richiesto da Foundry Virtual Tabletop. Assicurati di avere il rendering hardware e WebGL abilitati nel tuo browser.",
-"NoWebGL2": "Il tuo browser attualmente non supporta il rendering WebGL Versione 2 che è essenziale per il corretto funzionamento di Foundry Virtual Tabletop. Possono verificarsi errori o comportamenti grafici anomali.",
+"BrowserVersion": "Foundry VTT utilizza funzionalità JavaScript moderne che non sono supportate per versioni di {browser} inferiori a {minimum}. Stai utilizzando {browser} versione {versione}. Aggiorna o utilizza un browser diverso.",
+"ElectronVersion": "Stai utilizzando una versione precedente del client Electron di Foundry VTT. Per ottenere le migliori prestazioni, ti consigliamo di scaricare nuovamente la versione desiderata di Foundry VTT ed eseguire una reinstallazione completa del software.",
+"NoWebGL": "Al momento il tuo browser non supporta il rendering WebGL richiesto da Foundry VTT. Assicurati di avere il rendering hardware e WebGL abilitati nel tuo browser.",
+"NoWebGL2": "Il tuo browser attualmente non supporta il rendering WebGL Versione 2 che è essenziale per il corretto funzionamento di Foundry VTT. Possono verificarsi errori o comportamenti grafici anomali.",
 "BackgroundTextureSize": "Stai utilizzando un’immagine di sfondo della scena con dimensioni {width} px per {height} px. Una o entrambe queste dimensioni superano la dimensione massima dell’immagine di {max} px supportata dal tuo dispositivo.",
 "InvalidAdminKey": "La password dell'amministratore del server fornita non è valida. Se hai dimenticato la password configurata dovrai eliminare manualmente il file <strong>Config/admin.txt</strong>dalla posizione dei dati dell'utente.",
 "LoadPackages": "La richiesta di connessione al server di Foundry per elencare i pacchetti esistenti non è riuscita. Assicurarsi che l'applicazione consenta connessioni in uscita.",
 "NoTargetUsersForWhisper": "Non esistono utenti target per questo messaggio sussurrato. Controlla la correttezza oppure prova \"/w [Nome utente]\".",
 "CantWhisper": "Non sei autorizzato a inviare messaggi di chat sussurrati agli atri utenti.",
 "RendererNotDetected": "Non è stato possibile identificare la tua GPU, potrebbero verificarsi problemi di prestazioni imprevisti.",
-"NoHardwareAcceleration": "Il tuo browser web non ha l'accelerazione hardware abilitata. Ciò comprometterà gravemente le prestazioni di Foundry Virtual Tabletop. Assicurati di abilitare l'accelerazione hardware nelle impostazioni del browser.",
-"RequiresFullReinstall": "La versione {version} di Foundry VTT è ora disponibile, ma non può essere installata dall'applicazione Foundry Virtual Tabletop perché richiede aggiornamenti alle dipendenze principali, disponibili solo reinstallando il software dal sito Web <a href=\"https://foundryvtt.com/me/licenses\" target=\"_blank\">foundryvtt.com</a>.",
-"RequiresGenerationReinstall": "La versione {version} di Foundry VTT è ora disponibile, ma non può essere installata dall'applicazione Foundry Virtual Tabletop perché si tratta di un aggiornamento di nuova generazione che deve essere installato manualmente reinstallando il software dal sito web <a href=\"https://foundryvtt.com/me/licenses\" target=\"_blank\">foundryvtt.com</a>.",
-"RequiresElectronReinstall": "La versione {version} di Foundry VTT è ora disponibile, ma non può essere installata dall'applicazione Foundry Virtual Tabletop perché include una nuova versione di Electron che può essere installata solo manualmente reinstallando il software dal sito web <a href=\"https://foundryvtt.com/me/licenses\" target=\"_blank\">foundryvtt.com</a>.",
+"NoHardwareAcceleration": "Il tuo browser web non ha l'accelerazione hardware abilitata. Ciò comprometterà gravemente le prestazioni di Foundry VTT. Assicurati di abilitare l'accelerazione hardware nelle impostazioni del browser.",
+"RequiresFullReinstall": "La versione {version} di Foundry VTT è ora disponibile, ma non può essere installata dall'applicazione Foundry VTT perché richiede aggiornamenti alle dipendenze principali, disponibili solo reinstallando il software dal sito Web <a href=\"https://foundryvtt.com/me/licenses\" target=\"_blank\">foundryvtt.com</a>.",
+"RequiresGenerationReinstall": "La versione {version} di Foundry VTT è ora disponibile, ma non può essere installata dall'applicazione Foundry VTT perché si tratta di un aggiornamento di nuova generazione che deve essere installato manualmente reinstallando il software dal sito web <a href=\"https://foundryvtt.com/me/licenses\" target=\"_blank\">foundryvtt.com</a>.",
+"RequiresElectronReinstall": "La versione {version} di Foundry VTT è ora disponibile, ma non può essere installata dall'applicazione Foundry VTT perché include una nuova versione di Electron che può essere installata solo manualmente reinstallando il software dal sito web <a href=\"https://foundryvtt.com/me/licenses\" target=\"_blank\">foundryvtt.com</a>.",
 "RESOLUTION": {
     "Window": "Foundry VTT richiede una risoluzione di {reqWidth}px x {reqHeight}px o superiore. Il tuo schermo ha una risoluzione di {curWidth}px x {curHeight}px.",
     "Scale": "Foundry VTT richiede uno schermo di {reqWidth}px per {reqHeight}px. Le dimensioni di questa finestra sono {curWidth}px per {curHeight}px.",
@@ -1165,7 +1165,7 @@
   "Acknowledge": "Accetta Accordo",
   "Agree": "Accetto",
   "AgreeLabel": "Accetto questi termini",
-  "AgreeHint": "Selezionando la casella sopra indichi di aver letto e accettato i termini del Contratto di Licenza per l'Utente Finale di Foundry Virtual Tabletop.",
+  "AgreeHint": "Selezionando la casella sopra indichi di aver letto e accettato i termini del Contratto di Licenza per l'Utente Finale di Foundry VTT.",
   "Decline": "Rifiuta",
   "Declined": "Hai rifiutato il Contratto di Licenza per l'Utente Finale e non puoi utilizzare il software.",
   "ErrorAgreeRequired": "Devi spuntare la casella per confermare la tua accettazione di questo accordo per procedere."
@@ -2016,15 +2016,15 @@
 
 "SERVER_SETTINGS": {
   "Title": "Configurazione Applicazione",
-  "Warning": "Questi campi personalizzano il comportamento dell'applicazione Foundry Virtual Tabletop. Le modifiche richiederanno il riavvio del server.",
+  "Warning": "Questi campi personalizzano il comportamento dell'applicazione Foundry VTT. Le modifiche richiederanno il riavvio del server.",
   "Save": {
     "label": "Salva Configurazione Applicazione",
     "warning": "La modifica di queste opzioni di configurazione richiederà il riavvio del server affinché abbiano effetto. Desideri continuare?",
-    "restart": "Le impostazioni di configurazione dell'applicazione Foundry Virtual Tabletop sono state modificate. È necessario riavviare il server affinché le modifiche abbiano effetto."
+    "restart": "Le impostazioni di configurazione dell'applicazione Foundry VTT sono state modificate. È necessario riavviare il server affinché le modifiche abbiano effetto."
   },
   "SSLCert": " Certificato SSL",
   "Telemetry": {
-    "request1": "Se fornisci il tuo consenso, Foundry Virtual Tabletop condividerà una piccola quantità di dati di utilizzo anonimi con il sito web foundryvtt.com, che consentiranno al nostro team di comprendere meglio come viene utilizzato Foundry VTT e ci aiuteranno a migliorare il software.",
+    "request1": "Se fornisci il tuo consenso, Foundry VTT condividerà una piccola quantità di dati di utilizzo anonimi con il sito web foundryvtt.com, che consentiranno al nostro team di comprendere meglio come viene utilizzato Foundry VTT e ci aiuteranno a migliorare il software.",
     "request2": "Questa richiesta verrà visualizzata solo una volta; puoi modificare le tue preferenze relative alla condivisione dei dati di utilizzo in qualsiasi momento nel menu Configurazione applicazione cliccando sull'icona <i class=\"fas fa-cogs\"></i> in alto a destra di questa schermata.",
     "yes": "Consenti condivisione",
     "no": "Rifiuta condivisione"
@@ -2043,7 +2043,7 @@
   "FIELDS": {
     "adminPassword": {
       "label": "Password Amministratore",
-      "hint": "Una password di amministratore viene utilizzata per proteggere l'accesso a quest'area di Configurazione e Impostazione di Foundry Virtual Tabletop. Si consiglia vivamente di impostare una password di amministratore per il server."
+      "hint": "Una password di amministratore viene utilizzata per proteggere l'accesso a quest'area di Configurazione e Impostazione di Foundry VTT. Si consiglia vivamente di impostare una password di amministratore per il server."
     },
     "dataPath": {
       "label": "Percorso dati utente",
@@ -2051,7 +2051,7 @@
     },
     "telemetry": {
       "label": "Consenti la condivisione dei dati di utilizzo",
-      "hint": "Consenti la condivisione dei dati di utilizzo con noi, che ci aiutano a migliorare Foundry Virtual Tabletop. I dati raccolti, se questa opzione è abilitata, sono documentati nella nostra <a href=\"https://foundryvtt.com/article/privacy-policy/\" target=\"_blank\">Informativa sulla privacy</a>, non contengono informazioni di identificazione personale e non vengono condivisi con terze parti. La condivisione dei dati di utilizzo ci aiuta a rispondere a domande come quali versioni del software Foundry Virtual Tabletop sono più utilizzate, quali sistemi di gioco sono più utilizzati e quali versioni dei moduli sono installate di frequente. Utilizziamo le informazioni ricavate da questi dati per migliorare la compatibilità del software, fornire un'assistenza clienti migliore e condividere informazioni aggregate con la nostra community. Se questa opzione è disabilitata, nessun dato verrà condiviso."
+      "hint": "Consenti la condivisione dei dati di utilizzo con noi, che ci aiutano a migliorare Foundry VTT. I dati raccolti, se questa opzione è abilitata, sono documentati nella nostra <a href=\"https://foundryvtt.com/article/privacy-policy/\" target=\"_blank\">Informativa sulla privacy</a>, non contengono informazioni di identificazione personale e non vengono condivisi con terze parti. La condivisione dei dati di utilizzo ci aiuta a rispondere a domande come quali versioni del software Foundry VTT sono più utilizzate, quali sistemi di gioco sono più utilizzati e quali versioni dei moduli sono installate di frequente. Utilizziamo le informazioni ricavate da questi dati per migliorare la compatibilità del software, fornire un'assistenza clienti migliore e condividere informazioni aggregate con la nostra community. Se questa opzione è disabilitata, nessun dato verrà condiviso."
     },
     "cssTheme": {
       "label": "Imposta tema",
@@ -2068,11 +2068,11 @@
     "upnp.label": "Abilita UPnP",
     "port": {
       "label": "Porta",
-      "hint": "È possibile scegliere quale porta Foundry Virtual Tabletop utilizza per il traffico di connessione TCP e abilitare o disabilitare Universal Plug and Play (UPnP)."
+      "hint": "È possibile scegliere quale porta Foundry VTT utilizza per il traffico di connessione TCP e abilitare o disabilitare Universal Plug and Play (UPnP)."
     },
     "compressStatic": {
       "label": "Comprimi file statici",
-      "hint": "Comprimi i file forniti dal server web Foundry Virtual Tabletop prima di inviarli al client per ridurre la quantità di dati trasferiti."
+      "hint": "Comprimi i file forniti dal server web Foundry VTT prima di inviarli al client per ridurre la quantità di dati trasferiti."
     },
     "compressSocket": {
       "label": "Comprimi i dati del Web Socket",
@@ -2080,7 +2080,7 @@
     },
     "deleteNEDB": {
       "label": "Elimina i file NEDB migrati",
-      "hint": "Nella versione 11, il nostro software è passato da una vecchia tecnologia di database (NEDB) a una nuova (LevelDB). Migriamo automaticamente i vecchi file di database nel nuovo formato e conserviamo i vecchi file NEDB nel caso in cui sia necessario eseguire un rollback o diagnosticare un problema. Questa misura di sicurezza aumenta la quantità di spazio che Foundry Virtual Tabletop consuma sul disco rigido. L'attivazione di questa funzione eliminerà automaticamente i file NEDB dopo la migrazione. Questo diventerà il comportamento predefinito nella versione 12."
+      "hint": "Nella versione 11, il nostro software è passato da una vecchia tecnologia di database (NEDB) a una nuova (LevelDB). Migriamo automaticamente i vecchi file di database nel nuovo formato e conserviamo i vecchi file NEDB nel caso in cui sia necessario eseguire un rollback o diagnosticare un problema. Questa misura di sicurezza aumenta la quantità di spazio che Foundry VTT consuma sul disco rigido. L'attivazione di questa funzione eliminerà automaticamente i file NEDB dopo la migrazione. Questo diventerà il comportamento predefinito nella versione 12."
     },
     "hotReload": {
       "label": "File Pacchetto Hot-Reload",
@@ -2127,7 +2127,7 @@
 "SETTINGS.ResolutionScaleN": "Ridimensionamento Risoluzione Rapporto Pixel",
 "SETTINGS.ResolutionScaleL": "Ridimensiona la risoluzione dell'area di gioco in base al rapporto pixel rilevato dal browser. Per i dispositivi di visualizzazione con un'elevata densità di pixel (come i display retina), ciò aumenterà la risoluzione di rendering dell'area di disegno a scapito delle prestazioni dell'applicazione. Il ridimensionamento della risoluzione è influenzato anche dal livello di zoom del browser o dalle impostazioni di visualizzazione del sistema operativo. In questi casi, questa impostazione aumenterà o diminuirà la risoluzione effettiva del canvas a seconda della quantità di zoom applicata. La disabilitazione di questa impostazione può migliorare le prestazioni a scapito della qualità visiva per i display ad alta densità di pixel.",
 "SETTINGS.LangN": "Preferenze Lingua",
-"SETTINGS.LangL": "Cambia la lingua utilizzata in Foundry Virtual Tabletop.",
+"SETTINGS.LangL": "Cambia la lingua utilizzata in Foundry VTT.",
 "SETTINGS.LClickReleaseN": "Click tasto sinistro per rilasciare gli oggetti",
 "SETTINGS.LClickReleaseL": "Se abilitato, un click sinistro su uno spazio vuoto dell'area di gioco rilascerà tutti gli oggetti attualmente controllati. Se disabilitato, gli oggetti vengono rilasciati selezionando uno spazio vuoto, facendo clic sull'oggetto tenendo premuto il tasto Maiusc o premendo il tasto Esc.",
 "SETTINGS.NoCanvasN": "Disabilita Game Canvas",
@@ -2209,7 +2209,7 @@
   "MENU": {
     "name": "Configurazione Interfaccia Utente",
     "label": "Configura Interfaccia",
-    "hint": "Impostazioni che determinano l'aspetto e il comportamento dell'interfaccia utente di Foundry Virtual Tabletop."
+    "hint": "Impostazioni che determinano l'aspetto e il comportamento dell'interfaccia utente di Foundry VTT."
   },
   "HEADERS": {
     "theme": "Tema e schema di colori",
@@ -2263,7 +2263,7 @@
 "SETUP": {
 "NavLabel": "Impostazione Schede Configurazione",
 "CoreVersion": "Versione Software Principale",
-"CoreVersionHint": "Se è disponibile un aggiornamento di Foundry Virtual Tabletop, è possibile applicarlo qui. Attualmente stai utilizzando la versione {versionDisplay}.",
+"CoreVersionHint": "Se è disponibile un aggiornamento di Foundry VTT, è possibile applicarlo qui. Attualmente stai utilizzando la versione {versionDisplay}.",
 "SettingsHeader": "Configurazione Programma",
 "YouMustInstallASystem": "Devi installare un sistema di gioco prima di poter creare un nuovo mondo",
 "UpdateAvailable": "È disponibile un aggiornamento alla versione {channel} {version}!",
@@ -2276,7 +2276,7 @@
 "NoSystemsMessage": "Per creare il tuo primo Mondo, devi prima installare un <a class=\"system-install\" data-query=\"\" title=\"Game System\">Sistema di Gioco</a>. Prenditi un po' di tempo per sfogliare i sistemi disponibili e sceglierne uno da installare. Se non sai quale sistema desideri o il tuo sistema preferito non è disponibile, ti consigliamo di installare il sistema <a class=\"system-install\" data-query=\"Simple Worldbuilding\" title=\"Simple Worldbuilding\">Simple Worldbuilding</a> . ",
 "NoWorldsMessage": "Ora che hai un Sistema di Gioco che ti fornisce le regole su come giocare, ti consigliamo di creare un Mondo. I Mondi di Gioco sono spazi che contengono tutti i personaggi, schede, diari e mappe utilizzati per giocare, che si tratti di avventure one-shot o campagne complete.",
 "NueWorldDescription": "<p>Per ulteriori informazioni sulla creazione di mondi, consulta la documentazione <a href='https://foundryvtt.com/article/game-worlds/' target='_blank'>World</a> </p>",
-"SeeTutorial": "Per una guida più approfondita su come iniziare con Foundry Virtual Tabletop, puoi fare riferimento alla serie <a href=\"https://foundryvtt.com/article/tutorial/\" target=\"_blank\" title=\"Gamemaster Tutorial\">Gamemaster Tutorial</a> nella nostra <a href=\"https://foundryvtt.com/kb/\" target=\"_blank\" title=\"Knowledge Base\">Knowledge Base</a>.",
+"SeeTutorial": "Per una guida più approfondita su come iniziare con Foundry VTT, puoi fare riferimento alla serie <a href=\"https://foundryvtt.com/article/tutorial/\" target=\"_blank\" title=\"Gamemaster Tutorial\">Gamemaster Tutorial</a> nella nostra <a href=\"https://foundryvtt.com/kb/\" target=\"_blank\" title=\"Knowledge Base\">Knowledge Base</a>.",
 "Title": "Configurazione e Setup",
 "Update": "Aggiorna Software",
 "UpdateNewGeneration": "Richiesta Installazione Manuale",
@@ -2294,7 +2294,7 @@
 "UpdateCheck": "Aggiorna",
 "UpdateCheckFor": "Ricerca Aggiornamenti",
 "UpdatePerformIfAvailable": "Aggiorna Se Disponibile",
-"UpdateHint": "Puoi aggiornare il tuo software Foundry Virtual Tabletop a una nuova versione controllando la disponibilità di aggiornamenti sul tuo canale di aggiornamento software preferito.",
+"UpdateHint": "Puoi aggiornare il tuo software Foundry VTT a una nuova versione controllando la disponibilità di aggiornamenti sul tuo canale di aggiornamento software preferito.",
 "UpdatePrototype": "Prototipo",
 "UpdatePrototypeHint": "Prototipo: Rilasci per l'anteprima di funzionalità sperimentali che non sono ancora completamente sviluppate.",
 "UpdateDevelopment": "Sviluppo",
@@ -2445,17 +2445,17 @@
 "UpdateCleaningC": "Pulizia Completata",
 "UpdateInstallingS": "Installazione Aggiornamento",
 "UpdateInstallingC": "Installazione Completata",
-"UpdateCompleteManual": "Aggiornamento completato con successo. Arresto del server Foundry Virtual Tabletop per il riavvio manuale.",
+"UpdateCompleteManual": "Aggiornamento completato con successo. Arresto del server Foundry VTT per il riavvio manuale.",
 "UpdateCompleteAuto": "Aggiornamento completato con successo. Riavvio dell'applicazione Foundry VTT.",
-"UpdateNoInternetError": "Foundry Virtual Tabletop richiede una connessione Internet attiva per l'aggiornamento.",
+"UpdateNoInternetError": "Foundry VTT richiede una connessione Internet attiva per l'aggiornamento.",
 "UpdateWebsiteUnreachableError": "Al momento non è possibile raggiungere https://foundryvtt.com, riprova più tardi.",
 "UpdateWebsiteSlowWarning": "https://foundryvtt.com sembra essere sotto carico in questo momento, ti consigliamo di riprovare più tardi.",
-"UpdateWarningWillDisable": "Questo aggiornamento corrisponde a una nuova versione principale di Foundry Virtual Tabletop. La sua installazione richiederà la disabilitazione di alcuni moduli già installati che potrebbero non essere ancora compatibili.",
+"UpdateWarningWillDisable": "Questo aggiornamento corrisponde a una nuova versione principale di Foundry VTT. La sua installazione richiederà la disabilitazione di alcuni moduli già installati che potrebbero non essere ancora compatibili.",
 "UpdateButtonDownload": "Scarica aggiornamento {display}",
-"UpdateInfoAvailable": "È disponibile un aggiornamento di Foundry Virtual Tabletop alla versione {display}!",
+"UpdateInfoAvailable": "È disponibile un aggiornamento di Foundry VTT alla versione {display}!",
 "UpdateNotAvailable": "Nessun aggiornamento software è attualmente disponibile sul canale di aggiornamento richiesto.",
 "UpdateNoArchive": "Nessun aggiornamento da installare",
-"UpdateLicenseInvalid": "La tua licenza Foundry Virtual Tabletop non è valida.",
+"UpdateLicenseInvalid": "La tua licenza Foundry VTT non è valida.",
 "UpdatedPackages": "Log Aggiornamento Pacchetto",
 "NoUpdateMode": {
     "Label": "Aggiornamenti Disabilitati",
@@ -2630,7 +2630,7 @@
   "Create": "Crea Pacchetto",
   "Compatibility": {
     "Label": "Compatibilità",
-    "Hint": "È possibile indicare facoltativamente che questo pacchetto è compatibile solo con una gamma di versioni del software Foundry Virtual Tabletop. La compatibilità può essere dichiarata per una versione di build specifica, ad esempio \"13.339\", o per una generazione più ampia, ad esempio \"13\"."
+    "Hint": "È possibile indicare facoltativamente che questo pacchetto è compatibile solo con una gamma di versioni del software Foundry VTT. La compatibilità può essere dichiarata per una versione di build specifica, ad esempio \"13.339\", o per una generazione più ampia, ad esempio \"13\"."
   },
   "TagJavaScript": "JavaScript",
   "TagCSS": "CSS",
