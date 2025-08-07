@@ -488,116 +488,145 @@
 "CHAT.PrivateRollContent": "{user} ha tirato dei dadi in privato",
 "CHAT.UnknownUser": "Utente sconosciuto",
 
-"COMBAT.NavLabel": "Navigazione Incontri di Combattimento",
-"COMBAT.Begin": "Inizia Combattimento",
-"COMBAT.Create": "Nuovo Incontro",
-"COMBAT.Delete": "Elimina Incontro",
-"COMBAT.Encounter": "Incontro",
-"COMBAT.EncounterPrevious": "Attiva Incontro Precedente",
-"COMBAT.EncounterNext": "Attiva Incontro Successivo",
-"COMBAT.End": "Termina Combattimento",
-"COMBAT.InitiativeRoll": "Tiro Iniziativa",
-"COMBAT.InitiativeReset": "Ripristina Iniziativa",
-"COMBAT.ClearMovementHistories": "Cancella Cronologia Movimenti",
-"COMBAT.InitiativeScore": "Punteggio Iniziativa",
-"COMBAT.EndTitle": "Terminare Combattimento?",
-"COMBAT.EndConfirmation": "Terminare combattimento corrente e azzerare l'indicatore turni?",
-"COMBAT.Linked": "Collegato alla scena, clic per scollegare",
-"COMBAT.None": "Nessun Incontro",
-"COMBAT.NoneActive": "Non c'è nessun Incontro di Combattimento nella scena visualizzata.",
-"COMBAT.NoneRemaining": "In questo incontro non son rimasti combattenti non sconfitti.",
-"COMBAT.NotStarted": "Non Iniziato",
-"COMBAT.PanToCombatant": "Vai al Combattente",
-"COMBAT.PingCombatant": "Combattente Ping",
-"COMBAT.WarnNonVisibleToken": "Questo combattente non è visibile per te.",
-"COMBAT.Round": "Round {round}",
-"COMBAT.Rounds": "Rounds",
-"COMBAT.RoundPrev": "Round Precedente",
-"COMBAT.RoundNext": "Round Successivo",
-"COMBAT.RollNPC": "Tiro Iniziativa PNG",
-"COMBAT.RollAll": "Tiro Iniziativa per tutti",
-"COMBAT.RollsInitiative": "{name} tira per l'iniziativa!",
-"COMBAT.Settings": "Impostazioni Combattimento",
-"COMBAT.SettingsSave": "Salva Impostazioni",
-"COMBAT.SidebarTitle": "Combattimento",
-"COMBAT.Sounds.Epic": "Epica",
-"COMBAT.Sounds.MC": "Commentatore Scontro",
-"COMBAT.ToggleVis": "Attiva/disattiva visibilità",
-"COMBAT.ToggleDead": "Contrassegna Sconfitti",
-"COMBAT.Turn": "Turno",
-"COMBAT.Turns": "Turni",
-"COMBAT.TurnEnd": "Fine Turno",
-"COMBAT.TurnNext": "Turno Successivo",
-"COMBAT.TurnPrev": "Turno Precedente",
-"COMBAT.UnknownCombatant": "Combattente Sconosciuto",
-"COMBAT.Unlinked": "Combattimento non collegato, fai clic per collegare alla scena",
-"COMBAT.CannotLinkToScene": "Non puoi collegare il Combattimento a una Scena che non contiene tutti i suoi Combattenti.",
-
-"COMBAT.CombatantActor": "Personaggio Rappresentato",
-"COMBAT.CombatantCreate": "Crea Combattente",
-"COMBAT.CombatantDefeated": "Sconfitto",
-"COMBAT.CombatantHidden": "Nascosto",
-"COMBAT.CombatantImage": "Miniatura Immagine",
-"COMBAT.CombatantInitiative": "Valore Iniziativa",
-"COMBAT.CombatantStatus": "Stato",
-"COMBAT.CombatantUpdate": "Aggiorna Combattente",
-"COMBAT.CombatantUpdateNamed": "Aggiorna Combattente: {name}",
-"COMBAT.CombatantName": "Nome Visualizzato",
-"COMBAT.CombatantRemove": "Rimuovi Combattente",
-"COMBAT.CombatantClear": "Azzera Iniziativa",
-"COMBAT.CombatantReroll": "Ri-tira Iniziativa",
-"COMBAT.CombatantClearMovementHistory": "Cancella Cronologia Movimenti",
-"COMBAT.CombatantMovementHistoryCleared": "Cancella Cronologia Movimenti per il Token \"{name}\".",
-"COMBAT.CombatantToken": "Token Rappresentato",
-"COMBAT.CombatantScene": "Scena Combattimento",
-"COMBAT.CombatantNotInScene": "Il Combattente {name} non è presente nella scena attualmente visualizzata",
-
-"COMBAT.FIELDS": {
-  "round.label": "Round",
-  "turn.label": "Turno"
-},
-  
-"COMBAT.TURN_MARKERS": {
-  "ANIMATIONS": {
-    "SPIN": "Rotazione",
-    "SPIN_PULSE": "Impulso Rotante",
-    "PULSE": "Impulso"
-  }
-},
-"COMBAT.CONFIG": {
-  "SHEET": {
-    "TURN_MARKERS": "Segnali Turno Token"
+"COMBAT": {
+   "NavLabel": "Navigazione Incontri di Combattimento",
+   "Begin": "Inizia Combattimento",
+   "Create": "Nuovo Incontro",
+   "Delete": "Elimina Incontro",
+   "Encounter": "Incontro",
+   "EncounterPrevious": "Attiva Incontro Precedente",
+   "EncounterNext": "Attiva Incontro Successivo",
+   "End": "Termina Combattimento",
+   "InitiativeRoll": "Tiro Iniziativa",
+   "InitiativeReset": "Ripristina Iniziativa",
+   "ClearMovementHistories": "Cancella Cronologia Movimenti",
+   "InitiativeScore": "Punteggio Iniziativa",
+   "EndTitle": "Terminare Combattimento?",
+   "EndConfirmation": "Terminare combattimento corrente e azzerare l'indicatore turni?",
+   "None": "Nessun Incontro",
+   "NoneActive": "Non c'è nessun Incontro di Combattimento nella scena visualizzata.",
+   "NoneRemaining": "In questo incontro non son rimasti combattenti non sconfitti.",
+   "NotStarted": "Non Iniziato",
+   "PanToCombatant": "Vai al Combattente",
+   "PingCombatant": "Combattente Ping",
+   "WarnNonVisibleToken": "Questo combattente non è visibile per te.",
+   "Round": "Round {round}",
+   "Rounds": "Rounds",
+   "RoundPrev": "Round Precedente",
+   "RoundNext": "Round Successivo",
+   "RollNPC": "Tiro Iniziativa PNG",
+   "RollAll": "Tiro Iniziativa per tutti",
+   "RollsInitiative": "{name} tira per l'iniziativa!",
+   "Settings": "Impostazioni Combattimento",
+   "SettingsSave": "Salva Impostazioni Combattimento",
+   "SidebarTitle": "Combattimento",
+   "Sounds": {
+     "Epic": "Epica",
+     "MC": "Commentatore Scontro"
+   },
+   "ToggleVis": "Attiva/disattiva visibilità",
+   "ToggleDead": "Contrassegna Sconfitti",
+   "Turn": "Turno",
+   "Turns": "Turni",
+   "TurnEnd": "Fine Turno",
+   "TurnNext": "Turno Successivo",
+   "TurnPrev": "Turno Precedente",
+   "UnknownCombatant": "Combattente Sconosciuto",
+   "CannotLinkToScene": "Non puoi collegare il Combattimento a una Scena che non contiene tutti i suoi Combattenti.",
+   "CombatantActor": "Personaggio Rappresentato",
+   "CombatantCreate": "Crea Combattente",
+   "CombatantDefeated": "Sconfitto",
+   "CombatantHidden": "Nascosto",
+   "CombatantImage": "Miniatura Immagine",
+   "CombatantInitiative": "Valore Iniziativa",
+   "CombatantStatus": "Stato",
+   "CombatantUpdate": "Aggiorna Combattente",
+   "CombatantUpdateNamed": "Aggiorna Combattente: {name}",
+   "CombatantName": "Nome Visualizzato",
+   "CombatantRemove": "Rimuovi Combattente",
+   "CombatantClear": "Azzera Iniziativa",
+   "CombatantReroll": "Ri-tira Iniziativa",
+   "CombatantClearMovementHistory": "Cancella Cronologia Movimenti",
+   "CombatantMovementHistoryCleared": "Cancella Cronologia Movimenti per il Token \"{name}\".",
+   "CombatantToken": "Token Rappresentato",
+   "CombatantScene": "Scena Combattimento",
+   "CombatantNotInScene": "Il Combattente {name} non è presente nella scena attualmente visualizzata",
+    "ACTIONS": {
+    "LinkToScene": "Collega alla Scena Visualizzata",
+    "UnlinkFromScene": "Scollega dalla scena"
+  },
+  "DURATION": {
+    "ROUNDS": {
+      "one": "Round",
+      "two": "Rounds",
+      "few": "Rounds",
+      "many": "Rounds",
+      "other": "Rounds"
+    },
+    "TURNS": {
+      "one": "Turno",
+      "two": "Turni",
+      "few": "Turni",
+      "many": "Turni",
+      "other": "Turni"
+    },
+    "None": "Nessuna"
   },
   "FIELDS": {
-    "core.combatTrackerConfig": {
-      "skipDefeated": {
-        "label": "Salta sconfitto",
-        "hint": "Ignora automaticamente i combattenti contrassegnati come sconfitti."
-      },
-      "resource": {
-        "label": "Risorsa Tracciata",
-        "hint": "Scegli un attributo da tracciare per ogni combattente."
-      },
-      "turnMarker": {
-        "enabled": {
-          "label": "Abilita Marcatori",
-          "hint": "Abilita i segnalini dei turni di combattimento per impostazione predefinita per tutti i Token."
+    "round": {
+      "label": "Round"
+    },
+    "turn": {
+      "label": "Turno"
+    }
+  },
+  "TURN_MARKERS": {
+    "ANIMATIONS": {
+      "SPIN": "Rotazione",
+      "SPIN_PULSE": "Impulso Rotante",
+      "PULSE": "Impulso"
+    }
+  },
+  "CONFIG": {
+    "SHEET": {
+      "TURN_MARKERS": "Marcatori Turno Token"
+    },
+    "FIELDS": {
+      "core.combatTrackerConfig": {
+        "skipDefeated": {
+          "label": "Salta sconfitto",
+          "hint": "Ignora automaticamente i combattenti contrassegnati come sconfitti."
         },
-        "src": {
-          "label": "Fonte Media",
-          "hint": "Un file immagine o video da utilizzare per impostazione predefinita come indicatore di turno Token."
+        "resource": {
+          "label": "Risorsa Tracciata",
+          "hint": "Scegli un attributo da tracciare per ogni combattente."
         },
-        "animation": {
-          "label": "Animazione",
-          "hint": "Il tipo di animazione da utilizzare di default per ogni segnalino di turno del token."
-        },
-        "disposition": {
-          "label": "Colore Disposizione",
-          "hint": "Applica un colore al segnalino del turno in base alla disposizione del segnalino."
+        "turnMarker": {
+          "enabled": {
+            "label": "Abilita Marcatori",
+            "hint": "Abilita i marcatori dei turni di combattimento per impostazione predefinita per tutti i Token."
+          },
+          "src": {
+            "label": "Fonte Multimediale",
+            "hint": "Un file immagine o video da utilizzare per impostazione predefinita come indicatore di turno Token."
+          },
+          "animation": {
+            "label": "Animazione",
+            "hint": "Il tipo di animazione da utilizzare di default per ogni marcatore di turno del token."
+          },
+          "disposition": {
+            "label": "Colore Atteggiamento",
+            "hint": "Applica un colore al marcatore del turno in base ad atteggiamento Token."
+          }
         }
       }
     }
-  }
+  },
+  "PingInvisibleToken": "Non puoi vedere il token di questo partecipante.",
+  "ResourceHint": "Scegli un attributo da monitorare per ogni partecipante.",
+  "SkipDefeatedHint": "Ignorare automaticamente i partecipanti contrassegnati come sconfitti?",
+  "TargetedBy": "Bersagliato da {list}",
+  "ToggleTargeting": "Attiva/disattiva bersaglio"
 },
 
 "COMPENDIUM.Name": "Nome Compendio",
@@ -629,6 +658,10 @@
 },
 "COMPENDIUM.ImportEntry": "Importa Voce",
 "COMPENDIUM.Locked": "{title} [Locked]",
+"COMPENDIUM.Migration": {
+  "Begin": "Inizio della migrazione per il pacchetto Compendium {collection}, si prega di pazientare.",
+  "Complete": "Migrazione del pacchetto Compendium {collection} completata con successo."
+},
 "COMPENDIUM.SidebarTitle": "Compendio",
 "COMPENDIUM.Type": "Tipo Documento",
 "COMPENDIUM.TypeHint": "Ogni Compendio contiene un tipo specifico di Documento.",
@@ -1354,6 +1387,7 @@
   "UNLOCK": "Sblocca barra scelta rapida",
   "PAGE_NEXT": "Pagina successiva",
   "PAGE_PREV": "Pagina precedente",
+  "EMPTY": "Slot vuoto",
   "CLEAR": "Cancella barra scelta rapida",
   "CLEAR_CONFIRM": "Vuoi cancellare tutte le macro assegnate dalla barra di scelta rapida?"
 },
