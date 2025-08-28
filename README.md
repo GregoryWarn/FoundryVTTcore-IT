@@ -1,4 +1,4 @@
-#FoundryVTTcore-IT
+# FoundryVTTcore-IT
 
 Traduzione Italiana di Foundry VTT Core
 
