@@ -1504,6 +1504,7 @@
 "Paste": "Incolla Oggetti",
 "Target": "Bersaglia Token",
 "Ruler": "Attiva/disattiva righello distanza",
+"UnconstrainedMovement": "Attiva/disattiva movimento senza vincoli",
 "SendToBack": "Porta gli oggetti in secondo piano",
 "BringToFront": "Porta gli oggetti in primo piano",
 "ToggleCharacterSheet": "Attiva/Disattiva Scheda Personaggio",
