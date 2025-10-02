@@ -905,7 +905,7 @@
 "CommonSelect": "Seleziona",
 "CommonSelectMultiple": "Seleziona Più",
 "CommonOpenSheet": "Apri Scheda",
-"DisableToolclips": "Disabilita i Toolclips nelle impostazioni",
+"DisableToolclips": "Puoi disabilitare questi Toolclips nelle impostazioni",
 "CutObjects": "Tagliati {count} oggetti {type}.",
 "CopiedObjects": "Copiati {count} oggetti {type}.",
 "PastedObjects": "Incollati {count} oggetti {type}.",
@@ -3924,7 +3924,7 @@
 "ResetWarning": "Vuoi ripristinare tutti gli avanzamenti del tour?",
 "ResetSuccess": "Reimposta lo stato di completamento di tutti i tour.",
 "SuggestedTitle": "Prossimo Tour Suggerito",
-"SuggestedDescription": "<p>Hai completato il Tour <strong>{currentTitle}</strong> .</p><p>Ti suggeriamo di continuare al tour <strong>{nextTitle}</strong> . Vorresti procedere?</p>"
+"SuggestedDescription": "<p>Hai completato il Tour <strong>{currentTitle}</strong> .</p><p>Ti suggeriamo di continuare al tour <strong>{nextTitle}</strong> . Vuoi procedere?</p>"
 },
   
 "USER": {
