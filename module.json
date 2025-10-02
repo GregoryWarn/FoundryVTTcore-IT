@@ -1,11 +1,10 @@
 {
   "title": "FoundryVTTcore-IT",
   "description": "Traduzione Italiana di Foundry VTT",
-  "version": "13.348",
+  "version": "13.350",
   "compatibility": {
     "minimum": "13",
-    "verified": "13.348",
-    "maximum": "13"
+    "verified": "13.350"
   },
   "languages": [
     {
@@ -17,7 +16,7 @@
   ],
   "url": "https://github.com/GregoryWarn/FoundryVTTcore-IT",
   "manifest": "https://github.com/GregoryWarn/FoundryVTTcore-IT/releases/latest/download/module.json",
-  "download": "https://github.com/GregoryWarn/FoundryVTTcore-IT/releases/download/v13.348/module.zip",
+  "download": "https://github.com/GregoryWarn/FoundryVTTcore-IT/releases/download/v13.350/module.zip",
   "id": "FoundryVTTcore-IT",
   "authors": [
     {
@@ -28,4 +27,3 @@
   "coreTranslation": true,
   "flags": {}
 }
-
