@@ -4523,7 +4523,7 @@
 "VISION.ModeDarkvision": "Scurovisione",
 "VISION.ModeMonochromatic": "Monocromatico",
 "VISION.ModeTremorsense": "Senso dei tremori",
-"VISION.ModeLightAmplification": "Amplificazione della luce"
+"VISION.ModeLightAmplification": "Amplificazione della luce",
 
 "WALL.FIELDS": {
   "c.label": "Coordinate Muro",
