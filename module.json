@@ -3,7 +3,7 @@
   "description": "Traduzione Italiana di Foundry VTT",
   "version": "14.360",
   "compatibility": {
-    "minimum": "13",
+    "minimum": "14",
     "verified": "14.360"
   },
   "languages": [
