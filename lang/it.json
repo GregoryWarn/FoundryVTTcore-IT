@@ -411,7 +411,7 @@
   "InitiativeReset": "Reimposta iniziativa",
   "ClearMovementHistories": "Cancella cronologia movimenti",
   "EndTitle": "Terminare l'incontro?",
-  "EndConfirmation": "Terminare questo incontro e svuotare il tracciatore dei turni?",
+  "EndConfirmation": "Terminare questo incontro e svuotare tracker dei turni?",
   "None": "Nessun incontro",
   "NoneActive": "Non c'è alcun incontro di combattimento attivo nella scena visualizzata.",
   "NoneRemaining": "Non ci sono combattenti rimasti non sconfitti in questo incontro.",
@@ -423,9 +423,9 @@
   "RollNPC": "Tira per PNG",
   "RollAll": "Tira per tutti",
   "RollsInitiative": "{name} tira per l'iniziativa!",
-  "Settings": "Impostazioni tracciatore incontro",
-  "SettingsSave": "Salva impostazioni tracciatore",
-  "SidebarTitle": "Tracciatore incontri",
+  "Settings": "Impostazioni Combat Tracker",
+  "SettingsSave": "Salva impostazioni tracker",
+  "SidebarTitle": "Combat Tracker",
   "Sounds": {
     "Epic": "Epico",
     "MC": "Commentatore Combattimento"
