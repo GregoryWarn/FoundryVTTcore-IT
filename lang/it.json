@@ -1921,8 +1921,6 @@
   "FPS": "FPS"
 },
 
-"PLAYLIST.Delete": "Elimina Playlist",
-"PLAYLIST.Edit": "Modifica Playlist",
 "PLAYLIST.DefaultChannel": "Canale Audio Playlist",
 "PLAYLIST.CurrentlyPlaying": "In Riproduzione",
 "PLAYLIST.ModeDisabled": "Solo Soundboard",
@@ -1970,6 +1968,7 @@
   "TOOLTIP": "Volume: {volume}%"
 },
 
+"PLAYLIST_SOUND.Create": "Crea Traccia",
 "PLAYLIST_SOUND.Update": "Aggiorna Traccia",
 "PLAYLIST_SOUND.FIELDS": {
   "name.label": "Nome Traccia",
@@ -1989,7 +1988,6 @@
 "SCENE.BackgroundScale": "Scala Immagine di Sfondo",
 "SCENE.BackgroundScaleHint": "Utilizza MAIUSC+rotellina del mouse o MAIUSC+Freccia su e MAIUSC+Freccia giù per regolare la dimensione dell'immagine di sfondo.",
 "SCENE.CaptureInitialViewPosition": "Posizione riquadro catturato come vista iniziale nel modulo di configurazione della scena.",
-"SCENE.Configure": "Configura",
 "SCENE.CurrentLevel": "Livello attuale",
 "SCENE.Darkness": "Oscurità",
 "SCENE.Details": "Dettagli",
@@ -2235,10 +2233,8 @@
       "hint": "Le scene possono avere più livelli verticali. Aggiungi un livello per trasformarla in scena multi-livello.",
       "label": "Aggiungi livello"
     },
-    "Down": "Scendi di un livello",
     "Edit": "Modifica livello",
-    "Remove": "Rimuovi livello",
-    "Up": "Sali di un livello",
+    "Delete": "Elimina livello",
     "View": "Visualizza livello"
   },
   "FIELDS": {
@@ -2289,7 +2285,8 @@
         "hint": "Configura quali altri livelli sono visibili da questo livello."
       }
     }
-  }
+  },
+  "CannotDeleteOnlyLevel": "Non è possibile eliminare l'unico livello presente in questa scena."
 },
 
 "SCENE_NAVIGATION": {
@@ -2363,6 +2360,10 @@
       "label": "Porta",
       "hint": "È possibile scegliere quale porta Foundry VTT utilizza per il traffico di connessione TCP e abilitare o disabilitare Universal Plug and Play (UPnP)."
     },
+    "unixSocket": {
+      "label": "Socket Unix",
+      "hint": "Invece di un numero di porta, è possibile inserire il percorso di un socket di dominio Unix. Se vengono inseriti sia la porta che il socket, verrà utilizzato il percorso del socket."
+    },
     "compressStatic": {
       "label": "Comprimi file statici",
       "hint": "Comprimi i file forniti dal server web Foundry VTT prima di inviarli al client per ridurre la quantità di dati trasferiti."
@@ -2394,10 +2395,6 @@
     }
   }
 },
-
-
-
-
 
 "SETTINGS.CombatConfigL": "Configura Combat Tracker",
 "SETTINGS.CombatConfigH": "Impostazioni relative al Combattimento e al Tracker.",
@@ -2513,6 +2510,9 @@
     "fade": "Dissolvenza Interfaccia",
     "other": "Altre Impostazioni"
   },
+  "ACTIONS": {
+    "Reset": "Reimposta"
+  },
   "FIELDS": {
     "uiScale": {
       "label": "Scala Interfaccia",
@@ -2555,9 +2555,6 @@
     }
   }
 },
-
-
-
 
 "SETUP": {
   "NavLabel": "Schede di configurazione del setup",
@@ -3109,7 +3106,8 @@
 "ErrorUserDoesNotExist": "L'utente richiesto, \"{user}\", non esiste!",
 "ErrorInvalidPassword": "Password non valida fornita per {user}!",
 "ErrorBanned": "{user} non ha il permesso di accedere a questo Mondo!",
-"LoginSuccess": "Accesso come {user} riuscito, iniziamo!"
+"LoginSuccess": "Accesso come {user} riuscito, iniziamo!",
+"WorldPendingSetup": "Questo mondo non è ancora pronto. Attendi che il Game Master effettui l'accesso e completi la configurazione prima di tentare di unirti."
 },
 
 "SHEETS.ConfigureSheet": "Configura Scheda",
@@ -3123,7 +3121,6 @@
 "SHEETS.DocumentSheetPrivate": "Non hai autorizzazioni sufficienti per visualizzare la scheda per questo {tipo}.",
 "SHEETS.Save": "Salva Configurazione Scheda",
 "SHEETS.FormNavLabel": "Navigazione Scheda Modulo",
-"SHEETS.CopyUuid": "Copia UUID Documento",
 "SHEETS.Theme": "Tema",
 "SHEETS.ThemeHint": "Non tutti i temi sono disponibili per ogni scheda.",
 
@@ -3200,6 +3197,7 @@
 "PERMISSION.ConfigureHint": "Ottimizza le azioni consentite agli utenti per ciascun ruolo.",
 "PERMISSION.Instructions": "Configura quale ruolo utente dispone dell'autorizzazione per eseguire l'azione. Nota che alcune azioni non possono essere disabilitate per gli utenti di tipo Dungeon Master. Alcune modifiche potrebbero non avere effetto fino a quando il gioco non viene ricaricato.",
 "PERMISSION.Permission": "Autorizzazione",
+"PERMISSION.Setting": "Autorizzazioni",
 "PERMISSION.Permissions": "Autorizzazioni Utente",
 "PERMISSION.Reset": "Ripristina Valori Default",
 "PERMISSION.Submit": "Salva Configurazione",
@@ -3253,9 +3251,9 @@
 "PERMISSION.QueryUserHint": "Consenti agli utenti con questo ruolo di interrogare altri utenti.",
 "PERMISSION.WarningNoCreate": "Non disponi di autorizzazioni sufficienti per creare un documento di tipo  {document}.",
 
-
 "PLACEABLE_PALETTE": {
   "Apply": "Applica",
+  "CannotApplyToLocked": "Non è possibile applicare la tavolozza agli oggetti bloccati.",
   "CloneSettings": "Clona",
   "MultipleValues": "<Valori multipli>",
   "Selected": "{document} Palette [{count}]",
@@ -3292,6 +3290,10 @@
       "top": {
         "label": "Superiore",
         "hint": "Il limite superiore dell’intervallo di elevazione."
+      },
+      "topInclusive": {
+        "label": "Superiore Incluso",
+        "hint": "Il limite superiore è incluso nell’intervallo di elevazione?"
       }
     },
     "attachment": {
@@ -3520,11 +3522,21 @@
       }
     },
     "changeLevel": {
+      "FIELDS": {
+        "movementActions": {
+          "label": "Azioni di Movimento consentite",
+          "hint": "Definisce quali azioni di movimento il Token può utilizzare per cambiare Livello. Se non viene selezionata alcuna azione, sono consentite tutte le azioni di movimento."
+        }
+      },
+      "Level": "Livello di Destinazione",
+      "MovementAction": "Azione di Movimento",
       "Confirm": "Vuoi spostare {token} a {level}?",
       "ConfirmSelect": "Seleziona il livello in cui vuoi spostare {token}.",
+      "ConfirmDisabled": "{token} non può essere trasferito a un altro livello dalla sua posizione attuale.",
       "Move": "Sposta",
       "MoveDown": "Sposta giù",
-      "MoveUp": "Sposta su"
+      "MoveUp": "Sposta su",
+      "DoNotMove": "Non Spostare"
     },
     "defineSurface": {
       "FIELDS": {
@@ -3647,10 +3659,13 @@
         "relative.label": "Relativo"
       },
       "Confirm": "Vuoi teletrasportare {token}?",
+      "ConfirmDisabled": "{token} non può essere teletrasportato dalla sua posizione attuale.",
       "ConfirmRevealed": "Vuoi teletrasportare {token} a {region} in {scene}?",
       "ConfirmSelectSameScene": "Seleziona la destinazione in {scene} dove teletrasportare {token}.",
       "ConfirmSelectDifferentScene": "Seleziona la destinazione dove teletrasportare {token}.",
-      "ConfirmSelectOption": "{region} in {scene}"
+      "ConfirmSelectOption": "{region} in {scene}",
+      "Teleport": "Teletrasporta",
+      "DoNotTeleport": "Non Teletrasportare"
     },
     "toggleBehavior": {
       "FIELDS": {
@@ -3689,6 +3704,7 @@
 "SIDEBAR.CollapseToggle": "Comprimi o espandi",
 "SIDEBAR.Delete": "Elimina",
 "SIDEBAR.DeleteWarning": "Questo {type} verrà eliminato definitivamente e non potrà essere ripristinato.",
+"SIDEBAR.DeleteManyWarning": "{count} {type} verranno eliminati definitivamente e non potranno essere recuperati.",
 "SIDEBAR.Duplicate": "Duplica",
 "SIDEBAR.Edit": "Modifica",
 "SIDEBAR.Export": "Esporta Dati",
@@ -3722,9 +3738,6 @@
   "ACTIONS": {
     "ChangeLevel": "Cambia livello",
     "Clear": "Svuota",
-    "Configure": "Configura",
-    "Create": "Crea {name}",
-    "Delete": "Elimina",
     "Hidden": "Nascosto",
     "Hide": "Nascondi",
     "InLevel": "Incluso nel livello",
@@ -3767,7 +3780,8 @@
     "normal": "Muri normali",
     "secret": "Porte segrete",
     "terrain": "Muri di terreno",
-    "window": "Finestre"
+    "window": "Finestre",
+    "blank": "Muri vuoti"
   }
 },
   
@@ -3829,6 +3843,8 @@
 "WorldData": "Dati del Mondo",
 "CompendiumData": "Dati del Compendio",
 "ActiveModules": "Moduli Attivi",
+"Errors": "Errori",
+"Warnings": "Avvertimenti",
 "TABS": {
   "support": "Dettagli Supporto",
   "documents": "Problemi con i documenti",
@@ -3836,8 +3852,6 @@
   "modules": "Problemi col Module"
   } 
 },
-
-
   
 "TABLE": {
   "AnimateSetting": "Animare le Tabelle Dinamiche",
@@ -4031,7 +4045,10 @@
 "TOKEN.Size": "Dimensione",
 "TOKEN.Anchor": "Ancora",
 "TOKEN.AnchorHint": "L’ancora predefinita (0.5, 0.5) è il centro dell’immagine del Token.",
-"TOKEN.ImageAlts": "Token alternativi dell’Attore",
+"TOKEN.ImageAlts": "Token alternativi Personaggio",
+"TOKEN.ImageCycleNext": "Immagine Token Successivo",
+"TOKEN.ImageCyclePrev": "Immagine Token Precedente",
+"TOKEN.ImagePreview": "Anteprima Immagine Token", 
 "TOKEN.Mirror": "Specchia immagine",
 "TOKEN.MirrorX": "Orizzontalmente",
 "TOKEN.MirrorY": "Verticalmente",
@@ -4736,7 +4753,7 @@
 },
 
 "WEATHER.Rain": "Pioggia",
-"WEATHER.RainStorm": "Tempesta di Pioggia",
+"WEATHER.RainStorm": "Tempesta",
 "WEATHER.Snow": "Neve",
 "WEATHER.Blizzard": "Bufera di Neve",
 "WEATHER.AutumnLeaves": "Foglie Autunnali",
