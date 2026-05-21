@@ -1405,6 +1405,7 @@
 "TitleImageVideo": "Browser Immagini o Video",
 "TitleImage": "Browser Immagini",
 "TitleVideo": "Browser Video",
+"TitleTexture": "Browser Texture",
 "TitleAudio": "Browser Audio",
 "TitleText": "Browser Documenti",
 "TitleGraphics": "Browser 3D",
@@ -1828,7 +1829,10 @@
 "MODMANAGE": {
   "Bugs": "Segnalazioni bug o problemi",
   "DeactivateAll": "Disattiva tutti i moduli",
-  "Readme": "Documentazione modulo",
+  "Readme": "Documentazione",
+  "Author": "Autore",
+  "Authors": "Autori",
+  "URL": "URL",
   "Title": "Gestione moduli",
   "Instructions": "Usa questo pannello per configurare i moduli attivi nel tuo Mondo. Applicare modifiche ai moduli attivi comporterà il ricaricamento della sessione.",
   "View": "I moduli elencati di seguito sono attualmente attivi in questo Mondo.",
@@ -1947,6 +1951,7 @@
 "PLAYLIST.SoundResume": "Riprendi Suono",
 "PLAYLIST.SoundVolume": "Volume Audio",
 "PLAYLIST.SoundStop": "Arresta Audio",
+"PLAYLIST.Preload": "Precarica",
 "PLAYLIST.BulkImport": {
   "Title": "Importazione suoni",
   "Hint": "Seleziona una cartella contenente i suoni da importare.",
@@ -2037,11 +2042,12 @@
 "SCENE.Loading": "Caricamento {name}",
 "SCENE.Notes": "Note scena",
 "SCENE.Perception": "Percezione",
-"SCENE.Preload": "Precarica scena",
+"SCENE.Preload": "Precarica",
 "SCENE.Presentation": "Presentazione",
 "SCENE.Properties": "Proprietà scena",
 "SCENE.View": "Visualizza scena",
 "SCENE.ShiftBG": "Sposta",
+"SCENE.PullEveryone": "Tira Tutti",
 "SCENE.ToggleNav": "Attiva/disattiva navigazione",
 "SCENE.FogModeChangeMessage": "La modalità di esplorazione della nebbia è cambiata. Questo ricaricherà la nebbia e resetterà la visione.",
 "SCENE.Transition": {
@@ -2234,8 +2240,7 @@
       "label": "Aggiungi livello"
     },
     "Edit": "Modifica livello",
-    "Delete": "Elimina livello",
-    "View": "Visualizza livello"
+    "Delete": "Elimina livello"
   },
   "FIELDS": {
     "background": {
@@ -3552,6 +3557,10 @@
         "exposure": {
           "label": "Rivela superficie elevata",
           "hint": "Rivela parzialmente l’area visibile della superficie elevata agli osservatori sottostanti e esterni. L’area dipende dall’angolo tra osservatore e bordo della superficie e diminuisce con angoli più ripidi. Utile per tetti, balconi o piattaforme sopraelevate."
+        },
+        "culling": {
+          "label": "Elimina Token",
+          "hint": "Nascondi i token non controllati al di fuori del livello attualmente visualizzato nella vista del GM o quando la visualizzazione dei token è disabilitata. Le superfici di sfondo nascondono i token sottostanti, mentre le superfici in primo piano nascondono i token che si trovano sopra o sotto di esse."
         }
       },
       "PLACEMENTS": {
@@ -4048,7 +4057,8 @@
 "TOKEN.ImageAlts": "Token alternativi Personaggio",
 "TOKEN.ImageCycleNext": "Immagine Token Successivo",
 "TOKEN.ImageCyclePrev": "Immagine Token Precedente",
-"TOKEN.ImagePreview": "Anteprima Immagine Token", 
+"TOKEN.ImagePreview": "Anteprima Immagine Token",
+"TOKEN.ImagePathOverridden": "Questa immagine viene sovrascritta dalla texture del soggetto Dynamic Token Ring.",
 "TOKEN.Mirror": "Specchia immagine",
 "TOKEN.MirrorX": "Orizzontalmente",
 "TOKEN.MirrorY": "Verticalmente",
