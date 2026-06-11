@@ -1,5 +1,4 @@
 {
-"Foundry Virtual Tabletop": "Foundry VTT",
 "ADVENTURE": {
   "ImportSubmit": "Importa Avventura",
   "ImportProgress": "Importazione in corso",
@@ -537,6 +536,7 @@
   "Confirm": "Conferma",
   "Default": "Predefinito",
   "Delete": "Elimina",
+  "Foundry Virtual Tabletop": "Foundry VTT",
   "Invalid": "Non valido",
   "No": "No",
   "None": "Nessuno",
@@ -574,6 +574,10 @@
     "Start": "Importazione di {number} documenti {type} e {folderNumber} cartelle nella cartella {folder}. Attendere.",
     "Finish": "Importati con successo {number} documenti {type} e {folderNumber} cartelle nella cartella {folder}."
   },
+  "ImportFolder": {
+  "InvalidDocument": "Non puoi importare un documento {type} nella raccolta Cartelle del compendio {collection}.",
+  "InvalidDocuments": "Puoi importare nella raccolta Cartelle del compendio {collection} solo documenti di tipo Cartella."
+  },
   "ImportEntry": "Importa voce",
   "Locked": "{title} [Bloccato]",
   "Migration": {
@@ -590,6 +594,8 @@
     "Warning": "Stai tentando di sbloccare per la modifica un compendio che non appartiene a questo Mondo. Le modifiche potrebbero andare perse se il Sistema o Modulo viene aggiornato. Potresti voler duplicarlo nel tuo Mondo. Come vuoi procedere?"
   },
   "CannotViewWarning": "Non hai i permessi necessari per visualizzare questo compendio.",
+  "ModifyLocked": "Non puoi modificare il contenuto di questo compendio perché è bloccato.",
+  "ModifyPermissionDenied": "Non hai i permessi necessari per modificare questo compendio.",
   "OwnershipInheritBelow": "Eredita dal livello inferiore",
   "OwnershipReset": "Ripristina predefinito",
   "ART": {
@@ -2049,7 +2055,7 @@
 "SCENE.ShiftBG": "Sposta",
 "SCENE.PullEveryone": "Tira Tutti",
 "SCENE.ToggleNav": "Attiva/disattiva navigazione",
-"SCENE.FogModeChangeMessage": "La modalità di esplorazione della nebbia è cambiata. Questo ricaricherà la nebbia e resetterà la visione.",
+"SCENE.FogModeChangeMessage": "La modalità di Nebbia di Guerra è cambiata. Questo ricaricherà la nebbia e resetterà la visione.",
 "SCENE.Transition": {
   "Animation": "Animazione transizione",
   "Preview": "Anteprima",
@@ -2141,8 +2147,8 @@
       "hint": "Controlla la nebbia di guerra: \"Nessuno\" disattiva l’esplorazione, \"Individuale\" separa lo stato per ogni utente, \"Condiviso\" usa uno stato comune."
     },
     "overlay": {
-      "label": "Immagine nebbia",
-      "hint": "Immagine opzionale da mostrare sulle aree non esplorate."
+      "label": "Immagine aree inesplorate",
+      "hint": "Un'immagine opzionale della Nebbia di Guerra da visualizzare sopra le aree inesplorate della Scena. Se è stato configurato un Colore delle aree inesplorate, l'immagine verrà sovrapposta ad esso."
     },
     "colors": {
       "explored": {
@@ -2265,9 +2271,8 @@
       "alphaThreshold.label": "Soglia alfa"
     },
     "fog": {
-      "label": "Nebbia di esplorazione",
-      "src.label": "Texture non esplorata",
-      "tint.label": "Tinta texture"
+      "label": "Nebbia di Guerra",
+      "src.label": "Immagine aree inesplorate"
     },
     "textures": {
       "label": "Posizionamento",
@@ -3261,8 +3266,8 @@
   "CannotApplyToLocked": "Non è possibile applicare la tavolozza agli oggetti bloccati.",
   "CloneSettings": "Clona",
   "MultipleValues": "<Valori multipli>",
-  "Selected": "{document} Palette [{count}]",
-  "Title": "{document} Palette"
+  "Selected": "{document} Palette: Modifica [{count}]",
+  "Title": "{document} Palette: Preimpostata"
 },
   
 "REGION": {
@@ -3776,7 +3781,8 @@
     "Title": "Filtro avanzato",
     "Level": "Filtra per livello",
     "Tooltip": "Filtri avanzati. Clic destro per svuotare.",
-    "Top": "Superiore"
+    "Top": "Superiore",
+    "Viewed": "Solo Visto"
   },
   "Search": {
     "placeholder": "Filtra {name}"
@@ -3867,7 +3873,9 @@
   "AnimateSettingHint": "Visualizza un'animazione in stile roulette quando mostri un risultato da una Tabella.",
   "DrawFlavor": "Risultato del tiro sulla tabella {name}",
   "DrawFlavorPlural": "{number} risultati del tiro sulla tabella {name}",
-  "NoAvailableResults": "Nessun risultato disponibile che possa essere estratto da questa tabella.",
+  "DrawMaximumIterations": "Impossibile effettuare un'estrazione dalla tabella {name}: raggiunto il numero massimo di iterazioni.",
+  "NoAvailableResults": "Non ci sono risultati disponibili da estrarre da questa tabella.",
+  "NoPossibleResults": "Nessun risultato può essere estratto da questa tabella e dalla formula specificata.",
   "Result": "Risultato",
   "ResultDescription": "Descrizione Risultato",
   "SHEETS": {
@@ -4094,6 +4102,7 @@
   "depth.label": "Dimensione Z",
   "level.label": "Livello",
   "movementAction.label": "Azione di movimento",
+  "movementAction.hint": "Quando è selezionato Default, l'azione di movimento viene automaticamente determinata per questo Token.",
   "actorId.label": "Attore rappresentato",
   "actorLink.label": "Collega dati Attore",
   "displayName.label": "Mostra nome",
