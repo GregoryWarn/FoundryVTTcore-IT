@@ -600,7 +600,8 @@
   "OwnershipReset": "Ripristina predefinito",
   "ART": {
     "CONFIG": {
-      "Hint": "Usa le frecce per regolare la priorità delle fonti grafiche. Se un Attore ha più fonti, verrà usata quella con priorità maggiore.",
+      "Hint": "Usa le frecce per regolare la priorità delle fonti grafiche. Se un Documento ha più fonti, verrà usata quella con priorità maggiore.",
+      "Items": "Oggetti",
       "Portraits": "Ritratti",
       "PriorityDecrease": "Diminuisci priorità",
       "PriorityIncrease": "Aumenta priorità",
@@ -1082,6 +1083,7 @@
   "StatusUpgrade": "Empowered",
   "Submit": "Submit Changes",
   "CHANGES": {
+    "Unregistered": "Un tipo di modifica \"{type}\" non è registrato.",
     "PHASES": {
       "initial": {
         "label": "Initial",
