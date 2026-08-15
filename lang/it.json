@@ -1227,7 +1227,7 @@
   "NoWebGL": "Al momento il tuo browser non supporta il rendering WebGL richiesto da Foundry VTT. Assicurati di avere il rendering hardware e WebGL abilitati nel tuo browser.",
   "NoWebGL2": "Il tuo browser attualmente non supporta il rendering WebGL Versione 2 che è essenziale per il corretto funzionamento di Foundry VTT. Possono verificarsi errori o comportamenti grafici anomali.",
   "BackgroundTextureSize": "Stai utilizzando un’immagine di sfondo della scena con dimensioni {width} px per {height} px. Una o entrambe queste dimensioni superano la dimensione massima dell’immagine di {max} px supportata dal tuo dispositivo.",
-  "InvalidAdminKey": "La password dell'amministratore del server fornita non è valida. Se hai dimenticato la password configurata dovrai eliminare manualmente il file <strong>Config/admin.txt</strong>dalla posizione dei dati dell'utente.",
+  "InvalidAdminCredentials": "L'username o la password dell'amministratore del server non sono validi. Se hai dimenticato le credenziali configurate dovrai eliminare manualmente il file <strong>Config/admin.txt</strong>dalla posizione dei dati dell'utente.",
   "LoadPackages": "La richiesta di connessione al server di Foundry per elencare i pacchetti esistenti non è riuscita. Assicurarsi che l'applicazione consenta connessioni in uscita.",
   "NoTargetUsersForWhisper": "Non esistono utenti target per questo messaggio sussurrato. Controlla la correttezza oppure prova \"/w [Nome utente]\".",
   "CantWhisper": "Non sei autorizzato a inviare messaggi di chat sussurrati agli atri utenti.",
@@ -1458,6 +1458,7 @@
 "INVITATIONS.Copied": "Link di invito al gioco copiato negli appunti",
 "INVITATIONS.Instructions": "Condividi i link qui sotto con gli utenti che desideri partecipino al gioco. Usa il link contrassegnato come 'Rete Locale' per gli utenti all'interno della tua rete, usa invece il link 'Internet' per gli utenti che accedono dall'esterno sulla porta configurata.",
 "INVITATIONS.Internet": "Internet",
+"INVITATIONS.InternetV6": "Internet (IPv6)",
 "INVITATIONS.Local": "Rete Locale",
 "INVITATIONS.Title": "Link di Invito al Gioco",
 "INVITATIONS.OpenConnection": "La tua connessione sembra essere aperta",
@@ -2304,7 +2305,12 @@
 "SCENE_NAVIGATION": {
   "COLLAPSE": "Comprimi navigazione",
   "EXPAND": "Espandi navigazione",
-  "LABEL": "Navigazione scena"
+  "LABEL": "Navigazione scena",
+  "SCENE": {
+    "Viewing": "Visualizzata",
+    "Active": "Attiva",
+    "Hidden": "Nascosta"
+  }
 },
 
 "GRID.STYLES":{
@@ -2343,6 +2349,10 @@
     "OtherSettings": "Altre Impostazioni"
   },
   "FIELDS": {
+    "adminUsername": {
+      "label": "Username Amministratore",
+      "hint": "Il nome utente dell'amministratore viene utilizzato per proteggere l'accesso all'area di configurazione e impostazione di Foundry VTT. La configurazione di un nome utente amministratore è facoltativa, ma consigliata."
+    },
     "adminPassword": {
       "label": "Password Amministratore",
       "hint": "Una password di amministratore viene utilizzata per proteggere l'accesso a quest'area di Configurazione e Impostazione di Foundry VTT. Si consiglia vivamente di impostare una password di amministratore per il server."
@@ -2549,6 +2559,10 @@
         "hint": "Specifica se preferisci che gli elementi dell'interfaccia utente vengano renderizzati utilizzando un tema chiaro o un tema scuro."
       }
     },
+    "chatBackground": {
+      "hint": "Visualizza la chat con uno sfondo, anziché sovrapporre le schede della chat all'area di lavoro.",
+      "label": "Sfondo chat"
+    },
     "chatNotifications": {
       "label": "Notifiche chat",
       "hint": "Scegli se le notifiche dei nuovi messaggi di chat devono essere visualizzate come schede di chat complete o solo come un pip nella scheda della chat.",
@@ -2651,16 +2665,18 @@
   "FavoritePackage": "Preferito",
   "Verified": "Pacchetto verificato per questa versione di Foundry",
   "ErrorTimeout": "La richiesta a {url} è andata in timeout dopo {timeout}s",
-
+  "GoBack": "Torna indietro",
+  
+  "ShuttingDown": {
+    "Confirm": "Sei sicuro di voler arrestare il server?",
+    "Title": "Arresto in corso",
+    "Message": "Il server è in fase di arresto. Sarà necessario riavviarlo per potervi accedere nuovamente.",
+    "Unavailable": "Il server non è ancora disponibile. Verifica che sia stato riavviato oppure riprova tra qualche secondo."
+  },
+  
   "WarningsTitle": "Avvisi pacchetti",
   "WarningsNone": "Non hai alcun avviso!",
   "WarningsManage": "Gestisci pacchetto",
-
-  "ManifestUpdate": "Versione aggiornata disponibile su un nuovo URL di installazione",
-  "ManifestUpdateAvailable": "Una nuova versione di \"{package}\" è disponibile a un URL di installazione diverso. Questo accade quando la posizione o l’autore del pacchetto è cambiato.",
-  "PriorManifestUrl": "URL manifest precedente (Versione {version})",
-  "UpdatedManifestUrl": "URL manifest aggiornato (Versione {version})",
-  "SwapToTheUpdatedManifest": "Vuoi passare al nuovo URL del manifest? (consigliato)",
 
   "CurrentVersion": "Versione attuale",
   "ForceUpdate": "Forzare aggiornamento?",
@@ -2691,12 +2707,15 @@
   "PackageInstalled": "Installato",
   "PackageNotOwned": "Non posseduto",
   "PackageName": "Nome pacchetto",
+  "PackageOwnershipUnknown": "Proprietà sconosciuta",
+  "PackageOwnershipUnknownHint": "Non è stato possibile recuperare da foundryvtt.com le informazioni sui diritti di utilizzo del tuo pacchetto, quindi non è possibile determinare se possiedi questo pacchetto.",
   "PackageProtected": "Protetto",
   "PackageRequiresDowngradeHint": "Devi eseguire il downgrade a Foundry VTT versione {vmax} per installare questo pacchetto.",
   "PackageRequiresDowngradeLabel": "Richiede downgrade",
   "PackageRequiresUpgradeHint": "Devi aggiornare a Foundry VTT versione {vmin} per installare questo pacchetto.",
   "PackageRequiresUpgradeLabel": "Richiede aggiornamento",
   "PackageVisAll": "Tutti i pacchetti",
+  "PackageVisOwned": "Pacchetti posseduti",
   "PackageVisInst": "Installati",
   "PackageVisUnin": "Non installati",
   "PackageVisCompatible": "Compatibili",
@@ -2777,8 +2796,8 @@
   "UpdateCompleteAuto": "Aggiornamento completato. Riavvio dell’applicazione Foundry VTT.",
   "UpdateNoInternetError": "Foundry Virtual Tabletop richiede una connessione internet attiva per aggiornarsi.",
   "UpdateWebsiteUnreachableError": "Impossibile raggiungere https://foundryvtt.com, riprova più tardi.",
+  "UpdateRequestRefusedError": "https://foundryvtt.com ha rifiutato questa richiesta di aggiornamento. Questo problema non è legato alla tua chiave di licenza. Riprova più tardi.",
   "UpdateWebsiteSlowWarning": "https://foundryvtt.com è sovraccarico, riprova più tardi.",
-  "UpdateWarningWillDisable": "Questo aggiornamento è una nuova versione maggiore. Alcuni moduli potrebbero essere disattivati per incompatibilità.",
   "UpdateButtonDownload": "Scarica aggiornamento {display}",
   "UpdateInfoAvailable": "È disponibile un aggiornamento di Foundry Virtual Tabletop {display}!",
   "UpdateNotAvailable": "Nessun aggiornamento disponibile sul canale selezionato.",
@@ -2805,7 +2824,7 @@
 
   "AdminAccess": "Accesso amministratore richiesto",
   "AdminPasswordPrompt": "Non è attiva alcuna partita. Inserisci la password amministratore.",
-  "AdminPasswordForgot": "Se hai dimenticato la password, segui le istruzioni su <a href='https://foundryvtt.com/article/reset-admin-password/' target='_blank'>questo link</a>.",
+  "AdminCredentialsForgot": "Se hai dimenticato username o password, segui le istruzioni su <a href=\"https://foundryvtt.com/article/reset-admin-password/\" target=\"_blank\">questo link</a>.",
   "AdminLogIn": "Accedi",
   "AdminLogout": "Disconnetti admin",
 
@@ -2819,11 +2838,15 @@
     "Configure": "Configura",
     "Logout": "Esci",
     "Update": "Aggiorna",
-    "Warnings": "Avvisi"
+    "Warnings": "Avvisi",
+    "ShutDownServer": "Arresta"
   },
 
 "BACKUPS": {
 "Backup": "Backup",
+"BackupBeforeRestore": "Esegui il backup dello stato attuale",
+"BackupBeforeRestoreHint": "Crea un backup del pacchetto nello stato attuale, in modo che anche questo ripristino possa essere annullato.",
+"BackupBeforeRestoreNote": "Backup automatico prima del ripristino",
 "BackingUp": "Backup in Corso",
 "BulkActions": "Azioni in Blocco",
 "Extracting": "Estrazione Backup",
@@ -2847,6 +2870,7 @@
 "DeleteBackupTitle": "Eliminazione dei backup per {title}",
 "DeleteBackupWarning": "L'eliminazione di un backup non può essere annullata. Vuoi continuare?",
 "DeleteBackupWarningPl": "Sono stati selezionati <strong>{count}</strong> backup per l'eliminazione. Questa azione non può essere annullata. Vuoi continuare?",
+"DeleteSelected": "Elimina Selezionate",
 "DeletingSnapshot": "Eliminazione istantanee",
 "DeleteSnapshotComplete": "Istantanea eliminata.",
 "DeleteSnapshotCompletePl": "Eliminate {count} istantanee.",
@@ -2870,7 +2894,8 @@
 "Restoring": "Ripristino Backup In Corso",
 "RestoreLatest": "Ripristina Più Recente",
 "RestoreLatestBackup": "Ripristina Backup Più Recente",
-"RestoreBackupWarning": "Il ripristino di un backup cancellerà lo stato corrente del pacchetto. Questa azione non può essere annullata. Vuoi continuare?",
+"RestoreBackupWarning": "Il ripristino di un backup cancellerà lo stato attuale del pacchetto. A meno che tu non scelga di eseguire un backup selezionando la casella sottostante, questa operazione non potrà essere annullata. Vuoi continuare?",
+"RestoreBackupWarningNoBackups": "Il ripristino di un backup cancellerà lo stato attuale del pacchetto. Questa operazione non potrà essere annullata. Vuoi continuare?",
 "RestoreBackupTitle": "Ripristino del backup per {title}",
 "RestoreBackupFailure": "Impossibile ripristinare il backup per {title}. Consultare la console (F12) per i dettagli.",
 "RestoreBackupComplete": "{title} è stato ripristinato con successo al backup effettuato in data {date}",
@@ -2881,6 +2906,7 @@
 "RestoreSnapshotWarning": "Il ripristino di un'istantanea riporta lo stato dell'installazione di Foundry VTT a quello in cui è stata creata l'istantanea. Saranno eseguiti i roll back di tutte le versioni e gli stati del mondo. Questo processo non può essere annullato.",
 "RestoreSnapshotUnchangedPackages": "E' stato aggiunto <strong>1</strong> pacchetto dopo la creazione dell'istantanea e rimarrà invariato dopo il suo ripristino.",
 "RestoreSnapshotUnchangedPackagesPl": "Sono stati aggiunti <strong>{count}</strong> pacchetti dopo la creazione dell'istantanea e rimarranno invariati dopo il suo ripristino.",
+"SelectAll": "Seleziona Tutto",
 "Snapshot": "Istantanea",
 "TakeBackup": "Esegui il Backup",
 "VersionFormat": "Versione {version}",
@@ -2904,8 +2930,6 @@
     },
     "CannotRestoreUnusable": "Questo backup non può essere ripristinato in quanto renderebbe il pacchetto inutilizzabile."
   },
-
-  
 "COMPAT": {
 "Title": "Anteprima Compatibilità: {release}",
 "Compatible": "{count} Compatibile",
@@ -2941,6 +2965,20 @@
     },
     "ManifestWrongPackageType": "L'URL fornito non sembra puntare a un {packageType}."
   },
+  "PROVIDER_FILTER": {
+    "Label": "Fornitori",
+    "Placeholder": "Cerca fornitori"
+  },
+  "SYSTEM_FILTER": {
+    "Label": "Sistemi",
+    "Systems": "Richiede un sistema",
+    "RequiresN": "Richiede {count} sistemi",
+    "MODES": {
+      "installed": "Disponibile per i sistemi installati",
+      "none": "Nessuna restrizione",
+      "specific": "Richiede un sistema specifico"
+    }
+  },
   "UPDATE_NOTES": {
     "Title": "Note di rilascio: {release}",
     "FullList": "Guarda <a href=\"{url}\" target=\"_blank\">full list</a> Note di rilascio.",
@@ -2969,40 +3007,64 @@
     "Label": "Compatibilità",
     "Hint": "È possibile indicare facoltativamente che questo pacchetto è compatibile solo con una gamma di versioni del software Foundry VTT. La compatibilità può essere dichiarata per una versione di build specifica, ad esempio \"13.339\", o per una generazione più ampia, ad esempio \"13\"."
   },
+  "TAGS": {
+    "adventures": "Avventure",
+    "ai-content": "Contiene contenuti generati dall'IA",
+    "ai-tools": "Strumenti di IA",
+    "analytics": "Analisi e monitoraggio",
+    "archived": "Archiviato",
+    "audio": "Miglioramenti audio",
+    "automation": "Miglioramenti all'automazione",
+    "chat": "Chat e messaggistica",
+    "combat": "Miglioramenti al combattimento",
+    "content": "Pacchetti di contenuti",
+    "dice": "Tiri di dado",
+    "importer": "Importazione di contenuti",
+    "integration": "Integrazioni esterne",
+    "journal": "Diari e appunti",
+    "overhaul": "Revisioni o suite di funzionalità",
+    "paid-features": "Contiene funzionalità a pagamento",
+    "patches": "Patch o correzioni di bug",
+    "sheets": "Schede di Attori e Oggetti",
+    "tools": "Strumenti e controlli",
+    "translation": "Traduzione e localizzazione",
+    "visuals": "Effetti visivi",
+    "zero-ai": "Non contiene IA"
+  },
   "TagJavaScript": "JavaScript",
   "TagCSS": "CSS",
   "TagCompendium": "Compendio",
-"TagLocalization": "Localizzazione",
-"TagVersion": "Versione",
-"TagCoreVersion": "Versione Principale",
-"TagUnavailable": "Non Disponibile",
-"GetPackagesTimedOut": "Tempo scaduto per il recupero pacchetti",
-"PackageInstallTimedOut": "Tempo scaduto per l'Installazione del pacchetto",
-"UpdateCheckTimedOut": "Tempo scaduto per il controllo aggiornamento",
-"WarmCacheTimedOut": "Tempo scaduto per la preparazione del pacchetto",
-"Lock": "Blocca {type}",
-"Locked": "Bloccato",
-"Unlock": "Sblocca {type}",
-"Unlocked": "Sbloccato",
-"Favorite": "Imposta Preferito",
-"Unfavorite": "Rimuovi Preferito",
-"InstallFailed": "Si sono riscontrati errori durante l'installazione del pacchetto. Consulta il registro della console (F12) per i dettagli.",
-"UninstallLocked": "Non puoi disinstallare il {type} \"{id}\" perché è bloccato.",
-"LaunchLocked": "Non puoi avviare il Mondo \"{id}\" perché è bloccato.",
-"AlreadyUpdated": "{name} è già aggiornato.",
-"AllUpdated": "Tutti i {type} sono aggiornati!",
-"UpdateAllInProgress": "Un workflow \"aggiorna tutto\" è già in corso. Devi aspettare che sia completato prima di aggiornare altri tipi di pacchetti.",
-"Description": "Descrizione",
-"ModuleCreate": "Crea Modulo",
-"ModuleCreateHint": "È possibile utilizzare questa funzione per creare un modulo che può essere condiviso su più mondi o confezionato per la distribuzione ad altri utenti. i campi sottostanti sono solo un sottoinsieme di quello che può essere configurato. Sarai in grado di gestire e modificare ulteriormente il tuo pacchetto dopo averlo creato modificando manualmente il suo file manifest JSON.",
-"ModuleCreateSuccess": "Il nuovo modulo \"{id}\" è stato creato ed è ora disponibile per l'uso!",
-"ModuleCreateErrorAlreadyExists": "Il modulo \"{id}\" esiste già! Scegli un identificativo pacchetto differente.",
-"ConfigTitle": "Modulo: {module}",
-"NewModuleTitle": "Mio Nuovo Modulo",
-"ModuleEdit": "Modifica Modulo",
-"ModuleEditHint": "È possibile utilizzare i campi sottostanti per aggiornare le proprietà dei dati del manifesto del modulo.",
-"ModuleEditWarning": "Si stanno modificando i dati del manifesto di un modulo installabile. Le modifiche apportate a questi dati potrebbero comprometterne la funzionalità o la capacità del modulo di essere ulteriormente aggiornato. Si prega di procedere con cautela.",
-"ModuleEditSuccess": "I dati del manifesto del modulo \"{id}\" sono stati modificati.",
+  "TagLocalization": "Localizzazione",
+  "TagVersion": "Versione",
+  "TagCoreVersion": "Versione Principale",
+  "TagUnavailable": "Non Disponibile",
+  "GetPackagesTimedOut": "Tempo scaduto per il recupero pacchetti",
+  "PackageInstallTimedOut": "Tempo scaduto per l'Installazione del pacchetto",
+  "UpdateCheckTimedOut": "Tempo scaduto per il controllo aggiornamento",
+  "WarmCacheTimedOut": "Tempo scaduto per la preparazione del pacchetto",
+  "Lock": "Blocca {type}",
+  "Locked": "Bloccato",
+  "Unlock": "Sblocca {type}",
+  "Unlocked": "Sbloccato",
+  "Favorite": "Imposta Preferito",
+  "Unfavorite": "Rimuovi Preferito",
+  "InstallFailed": "Si sono riscontrati errori durante l'installazione del pacchetto. Consulta il registro della console (F12) per i dettagli.",
+  "UninstallLocked": "Non puoi disinstallare il {type} \"{id}\" perché è bloccato.",
+  "LaunchLocked": "Non puoi avviare il Mondo \"{id}\" perché è bloccato.",
+  "AlreadyUpdated": "{name} è già aggiornato.",
+  "AllUpdated": "Tutti i {type} sono aggiornati!",
+  "UpdateAllInProgress": "Un workflow \"aggiorna tutto\" è già in corso. Devi aspettare che sia completato prima di aggiornare altri tipi di pacchetti.",
+  "Description": "Descrizione",
+  "ModuleCreate": "Crea Modulo",
+  "ModuleCreateHint": "È possibile utilizzare questa funzione per creare un modulo che può essere condiviso su più mondi o confezionato per la distribuzione ad altri utenti. i campi sottostanti sono solo un sottoinsieme di quello che può essere configurato. Sarai in grado di gestire e modificare ulteriormente il tuo pacchetto dopo averlo creato modificando manualmente il suo file manifest JSON.",
+  "ModuleCreateSuccess": "Il nuovo modulo \"{id}\" è stato creato ed è ora disponibile per l'uso!",
+  "ModuleCreateErrorAlreadyExists": "Il modulo \"{id}\" esiste già! Scegli un identificativo pacchetto differente.",
+  "ConfigTitle": "Modulo: {module}",
+  "NewModuleTitle": "Mio Nuovo Modulo",
+  "ModuleEdit": "Modifica Modulo",
+  "ModuleEditHint": "È possibile utilizzare i campi sottostanti per aggiornare le proprietà dei dati del manifesto del modulo.",
+  "ModuleEditWarning": "Si stanno modificando i dati del manifesto di un modulo installabile. Le modifiche apportate a questi dati potrebbero comprometterne la funzionalità o la capacità del modulo di essere ulteriormente aggiornato. Si prega di procedere con cautela.",
+  "ModuleEditSuccess": "I dati del manifesto del modulo \"{id}\" sono stati modificati.",
   "Relationship": {
     "Package": "Pacchetto Correlato",
     "Category": "Categoria di Relazione"
@@ -3115,7 +3177,7 @@
 "UserKey": "Password Utente",
 "AuthAdmin": "Sei autenticato come utente amministratore del server.",
 "ErrorMustSelectUser": "Devi selezionare un utente per effettuare l'accesso.",
-"ErrorUserDoesNotExist": "L'utente richiesto, \"{user}\", non esiste!",
+"ErrorUserDoesNotExist": "L'utente richiesto, \"{user}\", non esiste.",
 "ErrorInvalidPassword": "Password non valida fornita per {user}!",
 "ErrorBanned": "{user} non ha il permesso di accedere a questo Mondo!",
 "LoginSuccess": "Accesso come {user} riuscito, iniziamo!",
@@ -3453,7 +3515,6 @@
   },
   "NOTIFICATIONS": {
     "PlacedRegionRotationNotAllowed": "Non è consentito ruotare la forma della Regione posizionata.",
-    "PlacedRegionNotAttachedToToken": "La Regione posizionata deve essere collegata a un Token.",
     "CopiedShape": "Forma della Regione copiata.",
     "CutShape": "Forma della Regione tagliata.",
     "PastedShape": "Forma della Regione incollata.",
