@@ -1473,6 +1473,7 @@
   "Empty": "Slot vuoto",
   "ToggleSheet": "Mostra {document}",
   "ClearConfirm": "Cancellare tutte le macro assegnate dalla barra di scelta rapida?",
+  "IsLocked": "Non puoi eseguire questa azione mentre la barra rapida è bloccata.",
   "ACTIONS": {
     "Clear": "Cancella barra scelta rapida",
     "Mute": "Muta Volume",
@@ -2330,6 +2331,16 @@
     "warning": "La modifica di queste opzioni di configurazione richiederà il riavvio del server affinché abbiano effetto. Desideri continuare?",
     "restart": "Le impostazioni di configurazione dell'applicazione Foundry VTT sono state modificate. È necessario riavviare il server affinché le modifiche abbiano effetto."
   },
+  "SSL": {
+    "Content": {
+      "Warning": "Un certificato autofirmato è un modo pratico per aggiungere la crittografia SSL alla tua istanza di Foundry VTT e ti permette di usufruire delle moderne API dei browser; tuttavia, i browser non considerano automaticamente attendibili i certificati autofirmati e mostreranno un avviso ben visibile quando tu o altri giocatori tenterete di connettervi alla tua istanza.",
+      "Ignore": "Puoi ignorare questo avviso senza rischi: la connessione sarà comunque crittografata.",
+      "DoNotShare": "Fai attenzione a non condividere con nessuno il file <code>fvtt-key.pem</code> generato.",
+      "Continue": "Vuoi procedere?"
+    },
+    "Title": "Genera certificato autofirmato",
+    "Tooltip": "Genera automaticamente (o rigenera) i certificati e le chiavi SSL."
+  },
   "SSLCert": " Certificato SSL",
   "Telemetry": {
     "request1": "Se fornisci il tuo consenso, Foundry VTT condividerà una piccola quantità di dati di utilizzo anonimi con il sito web foundryvtt.com, che consentiranno al nostro team di comprendere meglio come viene utilizzato Foundry VTT e ci aiuteranno a migliorare il software.",
@@ -2742,6 +2753,8 @@
   "PackageDependenciesCouldInstallSingular": "Una dipendenza può essere installata automaticamente.",
   "PackageDependenciesCouldInstallPlural": "{number} dipendenze possono essere installate automaticamente.",
   "PackageDependenciesDecline": "Hai scelto di non installare le dipendenze richieste per {title}. Dovrai installarle manualmente.",
+  "PackageDependenciesUnavailable": "Questo mondo non può essere creato perché le seguenti dipendenze obbligatorie non sono disponibili per l'installazione:",
+  "PackageDependencyUnlisted": "Questo pacchetto non è presente nell'elenco.",
   "PackageDependenciesSuccess": "Installato con successo {title} e {number} dipendenze.",
   "PackageUpdateCoreUpdateNeeded": "È disponibile un aggiornamento per {title}, ma richiede una versione del core almeno {vmin}. Stai usando {vcur}.",
   "PackageUpdateCoreUnstable": "È disponibile un aggiornamento per {title}, ma richiede una versione del core {vmin} non ancora stabile.",
@@ -3175,7 +3188,8 @@
 "NextSession": "Prossima Sessione",
 "SelectUser": "Seleziona Utente",
 "UserKey": "Password Utente",
-"AuthAdmin": "Sei autenticato come utente amministratore del server.",
+"AuthAdmin": "Sei autenticato come amministratore del server.",
+"AuthRequired": "Dovrai autenticarti come amministratore del server.",
 "ErrorMustSelectUser": "Devi selezionare un utente per effettuare l'accesso.",
 "ErrorUserDoesNotExist": "L'utente richiesto, \"{user}\", non esiste.",
 "ErrorInvalidPassword": "Password non valida fornita per {user}!",
