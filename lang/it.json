@@ -70,6 +70,10 @@
       "hint": "Un nome opzionale per identificare la fonte luminosa.",
       "label": "Nome"
     },
+    "hidden": {
+      "label": "Nascosta",
+      "hint": "Disabilita temporaneamente questa sorgente di luce."
+    },
     "rotation": {
       "label": "Angolo di Rotazione"
     },
@@ -969,6 +973,10 @@
   "width.label": "Larghezza",
   "height.label": "Altezza",
   "hidden.label": "Nascosto",
+  "locked": {
+      "label": "Bloccato",
+      "hint": "Impedisce manipolazione canva e le modifiche tramite palette."
+  },
   "elevation.label": "Elevazione",
   "rotation.label": "Rotazione",
   "sort": {
@@ -1011,6 +1019,10 @@
     "bezierFactor": {
       "label": "Smoothing Factor",
       "hint": "For freehand drawing, the smoothing factor controls the amount of spline smoothing."
+    },
+    "hidden": {
+      "label": "Nascosto",
+      "hint": "Nasconde questo Disegno a tutti i giocatori, ad eccezione del suo autore."
     },
     "fillAlpha.label": "Fill Opacity",
     "fillColor.label": "Fill Color",
@@ -1401,7 +1413,7 @@
 "TraverseBack": "Traversa indietro",
 "NoResults": "Nessun risultato corrispondente trovato in questa posizione.",
 "Upload": "Carica",
-"CannotUpload": "I caricamenti in questa cartella sono vietati perché i contenuti potrebbero essere sovrascritti durante gli aggiornamenti. Caricali invece nella cartella \"assets\" o in un'altra posizione consentita.",
+"CannotUpload": "I caricamenti in questa cartella sono vietati. Caricali invece nella cartella \"assets\" o in un'altra posizione consentita.",
 "Search": "Cerca",
 "ErrorTooLarge": "Il file che hai cercato di caricare è troppo grande per essere gestito dal tuo server proxy.",
 "ErrorSomethingWrong": "Si è verificato un problema con la richiesta di caricamento del file.",
@@ -1452,6 +1464,7 @@
 "GAME.ReturnSetup": "Torna alla Home",
 "GAME.ReturnSetupActiveUser": "C'è un altro utente attivo ad ora in questo mondo e verrà disconnesso. Vuoi procedere?",
 "GAME.ReturnSetupActiveUsers": "Ci sono altri {number} utenti attivi ad ora in ​​questo mondo e verranno disconnessi. Vuoi procedere?",
+"GAME.WorldShuttingDown": "Il mondo di gioco si sta arrestando e verrai reindirizzato alla pagina iniziale del server.",
 
 "INFO.SceneViewCanvasDisabled": "La scena \"{name}\" è ora visualizzata ma non viene mostrata perché il Canvas del gioco è disabilitato.",
 
@@ -2333,13 +2346,30 @@
   },
   "SSL": {
     "Content": {
-      "Warning": "Un certificato autofirmato è un modo pratico per aggiungere la crittografia SSL alla tua istanza di Foundry VTT e ti permette di usufruire delle moderne API dei browser; tuttavia, i browser non considerano automaticamente attendibili i certificati autofirmati e mostreranno un avviso ben visibile quando tu o altri giocatori tenterete di connettervi alla tua istanza.",
-      "Ignore": "Puoi ignorare questo avviso senza rischi: la connessione sarà comunque crittografata.",
-      "DoNotShare": "Fai attenzione a non condividere con nessuno il file <code>fvtt-key.pem</code> generato.",
-      "Continue": "Vuoi procedere?"
-    },
-    "Title": "Genera certificato autofirmato",
-    "Tooltip": "Genera automaticamente (o rigenera) i certificati e le chiavi SSL."
+      "Attempt": "Foundry Virtual Tabletop tenterà innanzitutto di ottenere un certificato dal servizio di terze parti Let's Encrypt. I browser considerano automaticamente attendibili questi certificati, che rappresentano quindi il metodo preferibile per abilitare SSL sul server. Per ottenere tali certificati, la tua istanza deve essere raggiungibile pubblicamente sulla porta 80, condizione che potrebbe non essere soddisfatta in alcune circostanze.",
+      "Fallback": "Se non è possibile ottenere un certificato attendibile, verrà emesso un certificato autofirmato. Questo consente comunque di crittografare la connessione e di abilitare le API moderne dei browser, ma questi ultimi non considerano automaticamente attendibili tali certificati e mostreranno un avviso ben visibile a te e ai tuoi giocatori. È possibile ignorare questo avviso senza rischi.",
+      "DoNotShare": "Fai attenzione a non condividere con nessuno il file della chiave privata generata (il cui nome termina con <code>-key.pem</code>), presente nella cartella Config.",
+      "Terms": "Per richiedere un certificato a Let's Encrypt è necessario accettare il <a href=\"https://letsencrypt.org/repository/\">Contratto di abbonamento</a>. Vuoi procedere?"
+      },
+      "ERRORS": {
+        "CertificateGenerationFailed": "Generazione del certificato non riuscita. Consulta i log del server per ulteriori dettagli.",
+        "CouldNotBind": "Impossibile rispondere alla richiesta di verifica dell'autorità di certificazione perché il tentativo di associare il server alla porta 80 è stato rifiutato.",
+        "NoCandidates": "Impossibile individuare indirizzi candidati per la generazione del certificato.",
+        "NoChallenge": "Let's Encrypt non ha fornito una procedura di verifica http-01 per l'indirizzo specificato.",
+        "PortUnreachable": "La porta 80 non è raggiungibile pubblicamente.",
+        "ProxySSL": "Questa istanza non necessita di un certificato SSL perché si trova già dietro un proxy inverso che gestisce SSL."
+      },
+      "RenewalFailed": "Rinnovo del certificato SSL gestito automaticamente non riuscito: {error}",
+      "RenewalFailedInGame": "Rinnovo del certificato SSL gestito automaticamente non riuscito. Probabilmente ciò non causerà problemi immediati, ma dovrai accedere alla schermata di configurazione tramite l'opzione \"Torna alla configurazione\" appena possibile e provare a generare un nuovo certificato, oppure contattare chi gestisce la tua istanza di Foundry Virtual Tabletop.",
+      "SelfSigned": "Non è stato possibile ottenere un certificato da Let's Encrypt, pertanto è stato emesso un certificato autofirmato: {error}",
+      "Title": "Genera automaticamente il certificato",
+      "Tooltip": "Genera automaticamente (o rigenera) i certificati SSL e le relative chiavi.",
+      "Trusted": "È stato ottenuto un certificato attendibile, che verrà rinnovato automaticamente. Salva le impostazioni e riavvia il server per applicare le modifiche.",
+      "Unlock": {
+        "Title": "Interrompi il rinnovo automatico",
+        "Tooltip": "Interrompe la gestione automatica di questo certificato.",
+        "Warning": "Foundry Virtual Tabletop gestisce attualmente questo certificato e lo rinnova automaticamente prima della scadenza. Se continui, il certificato verrà eliminato e il rinnovo automatico verrà interrotto, consentendoti di gestire manualmente i certificati SSL. Vuoi procedere?"
+      }
   },
   "SSLCert": " Certificato SSL",
   "Telemetry": {
@@ -2415,7 +2445,7 @@
     },
     "sslCert": {
       "label": "Certificato",
-      "hint": "È possibile eseguire il server utilizzando la crittografia Secure Socket Layer (SSL) specificando i percorsi ai file di certificato e chiave. I percorsi sono assoluti o relativi alla sottodirectory Config nei dati utente."
+      "hint": "È necessario configurare il protocollo Secure Sockets Layer (SSL) per utilizzare alcune funzionalità moderne dei browser, come WebRTC (per le funzioni audio e video) o WebBluetooth (per le funzionalità dei dadi Bluetooth). Puoi generare autonomamente un certificato e un file di chiave per abilitare SSL oppure richiederne la creazione automatica. I percorsi possono essere assoluti oppure relativi alla sottocartella Config dei dati utente. Per ulteriori dettagli, consulta l'articolo <a href=\"https://foundryvtt.com/article/ssl/\" target=\"_blank\">Certificati SSL</a>."
     },
     "sslKey.label": "Tasto",
     "awsConfig": {
@@ -2606,7 +2636,7 @@
   "Modules": "Moduli aggiuntivi",
   "Systems": "Sistemi di gioco",
   "GettingStarted": "Introduzione",
-  "NoSystemsMessage": "Per creare il tuo primo Mondo, devi prima installare un <a class=\"system-install\" data-query=\"\" title=\"Game System\">Sistema di gioco</a>. Prenditi del tempo per esplorare i sistemi disponibili e sceglierne uno da installare. Se non sai quale sistema desideri o il tuo sistema preferito non è disponibile, ti consigliamo di installare il sistema <a class=\"system-install\" data-query=\"Simple Worldbuilding\" title=\"Simple Worldbuilding\">Simple Worldbuilding</a>. ",
+  "NoSystemsMessage": "Per creare il tuo primo mondo di gioco, devi prima installare un <a class=\"system-install\" data-query=\"\" title=\"Sistema di gioco\">sistema di gioco</a>. Dedica qualche minuto a esplorare i sistemi disponibili e scegli quello che desideri installare."
   "NoWorldsMessage": "Ora che hai un Sistema di gioco che fornisce le regole per giocare, dovrai creare un Mondo. I mondi di gioco sono spazi che contengono tutti i personaggi, schede, diari e mappe usati per giocare, sia per una singola sessione che per una campagna completa.",
   "NueWorldDescription": "<p>Per maggiori informazioni sulla configurazione dei Mondi, consulta la documentazione sui <a href='https://foundryvtt.com/article/game-worlds/' target='_blank'>World</a>.</p>",
   "SeeTutorial": "Per una guida più approfondita all’avvio di Foundry Virtual Tabletop, puoi consultare la serie di <a href=\"https://foundryvtt.com/article/tutorial/\" target=\"_blank\" title=\"Gamemaster Tutorial\">Tutorial del Game Master</a> nella nostra <a href=\"https://foundryvtt.com/kb/\" target=\"_blank\" title=\"Knowledge Base\">Knowledge Base</a>.",
@@ -2912,6 +2942,7 @@
 "RestoreBackupTitle": "Ripristino del backup per {title}",
 "RestoreBackupFailure": "Impossibile ripristinare il backup per {title}. Consultare la console (F12) per i dettagli.",
 "RestoreBackupComplete": "{title} è stato ripristinato con successo al backup effettuato in data {date}",
+"RestoreBackupConfirmCodeInvalid": "È necessario inserire il codice esatto per confermare la richiesta di ripristino del backup.",
 "RestoringSnapshot": "Ripristino Istantanea",
 "RestoreSnapshotFailure": "Impossibile ripristinare l'istantanea. Consultare la console (F12) per i dettagli.",
 "RestoreSnapshotComplete": "Istantanea ripristinata con successo fatta in data {date}.",
@@ -2919,6 +2950,7 @@
 "RestoreSnapshotWarning": "Il ripristino di un'istantanea riporta lo stato dell'installazione di Foundry VTT a quello in cui è stata creata l'istantanea. Saranno eseguiti i roll back di tutte le versioni e gli stati del mondo. Questo processo non può essere annullato.",
 "RestoreSnapshotUnchangedPackages": "E' stato aggiunto <strong>1</strong> pacchetto dopo la creazione dell'istantanea e rimarrà invariato dopo il suo ripristino.",
 "RestoreSnapshotUnchangedPackagesPl": "Sono stati aggiunti <strong>{count}</strong> pacchetti dopo la creazione dell'istantanea e rimarranno invariati dopo il suo ripristino.",
+"RestoreSnapshotConfirmCodeInvalid": "È necessario inserire il codice esatto per confermare la richiesta di ripristino dell'istantanea.",
 "SelectAll": "Seleziona Tutto",
 "Snapshot": "Istantanea",
 "TakeBackup": "Esegui il Backup",
@@ -3406,6 +3438,14 @@
       "label": "Visibilità",
       "hint": "Configura la visibilità della Regione."
     },
+    "hidden": {
+      "label": "Nascosta",
+      "hint": "Nasconde la regione ai giocatori e disattiva i suoi comportamenti."
+    },
+    "locked": {
+      "label": "Bloccata",
+      "hint": "Impedisce le interazioni sul canva e le modifiche tramite palette, inoltre nasconde la regione quando la visibilità è impostata per mostrare solo le regioni sbloccate."
+    },
     "highlightMode": {
       "label": "Modalità evidenziazione",
       "hint": "Configura se evidenziare le forme reali o le celle della griglia coperte dalla Regione."
@@ -3854,6 +3894,9 @@
     "ACTIONS": {
       "Clear": "Svuota"
     },
+    "Any": "Qualsiasi",
+    "Yes": "Sì",
+    "No": "No",
     "Bottom": "Inferiore",
     "Title": "Filtro avanzato",
     "Level": "Filtra per livello",
@@ -4001,7 +4044,8 @@
     "img.label": "Icona Risultato",
     "documentUuid.label": "Documento di Riferimento",
     "weight.label": "Peso",
-    "range.label": "Intervallo"
+    "range.label": "Intervallo",
+    "description.label": "Descrizione"
   }
 },
 
@@ -4031,6 +4075,10 @@
   "video": "Video"
 },
 "TILE.FIELDS": {
+   "hidden": {
+    "label": "Nascosta",
+    "hint": "Nascondi questa Tile ai giocatori."
+  },
   "sort.label": "Ordine",
   "texture": {
     "src.label": "Immagine o video del Tile",
@@ -4173,6 +4221,14 @@
 },
 "TOKEN.FIELDS": {
   "name.label": "Nome Token",
+  "hidden": {
+    "label": "Nascosto",
+    "hint": "Nasconde questo Token ai giocatori."
+  },
+  "locked": {
+    "label": "Bloccato",
+    "hint": "Impedisce che questo Token venga spostato sul canva."
+  },
   "sort.label": "Ordine",
   "width.label": "Dimensione X",
   "height.label": "Dimensione Y",
