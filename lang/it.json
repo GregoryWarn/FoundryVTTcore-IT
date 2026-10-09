@@ -2636,7 +2636,7 @@
   "Modules": "Moduli aggiuntivi",
   "Systems": "Sistemi di gioco",
   "GettingStarted": "Introduzione",
-  "NoSystemsMessage": "Per creare il tuo primo mondo di gioco, devi prima installare un <a class=\"system-install\" data-query=\"\" title=\"Sistema di gioco\">sistema di gioco</a>. Dedica qualche minuto a esplorare i sistemi disponibili e scegli quello che desideri installare."
+  "NoSystemsMessage": "Per creare il tuo primo mondo di gioco, devi prima installare un <a class=\"system-install\" data-query=\"\" title=\"Sistema di gioco\">sistema di gioco</a>. Dedica qualche minuto a esplorare i sistemi disponibili e scegli quello che desideri installare.",
   "NoWorldsMessage": "Ora che hai un Sistema di gioco che fornisce le regole per giocare, dovrai creare un Mondo. I mondi di gioco sono spazi che contengono tutti i personaggi, schede, diari e mappe usati per giocare, sia per una singola sessione che per una campagna completa.",
   "NueWorldDescription": "<p>Per maggiori informazioni sulla configurazione dei Mondi, consulta la documentazione sui <a href='https://foundryvtt.com/article/game-worlds/' target='_blank'>World</a>.</p>",
   "SeeTutorial": "Per una guida più approfondita all’avvio di Foundry Virtual Tabletop, puoi consultare la serie di <a href=\"https://foundryvtt.com/article/tutorial/\" target=\"_blank\" title=\"Gamemaster Tutorial\">Tutorial del Game Master</a> nella nostra <a href=\"https://foundryvtt.com/kb/\" target=\"_blank\" title=\"Knowledge Base\">Knowledge Base</a>.",
