@@ -19,7 +19,7 @@
   "ExportEdit": "Ricostruisci Avventura",
   "ExportSubmit": "Genera Avventura",
   "ExportDropZone": "Trascina e rilascia contenuti dal tuo Mondo per inserirli nell'Avventura.",
-  "ExportPackNoSystem": "Stai tentando di esportare Attori o Oggetti in un'Avventura senza sistema. Il compendio dell'Avventura deve avere un campo sistema che corrisponda a quello degli Attori o Oggetti.",
+  "ExportPackNoSystem": "Stai tentando di esportare Personaggi o Oggetti in un'Avventura senza sistema. Il compendio dell'Avventura deve avere un campo sistema che corrisponda a quello degli Personaggi o Oggetti.",
   "ExportPrimaryDocumentsOnly": "Puoi aggiungere solo Documenti primari presenti nel Mondo.",
   "CreateSuccess": "Avventura \"{name}\" creata con successo!",
   "UpdateSuccess": "Avventura \"{name}\" aggiornata con successo!",
@@ -515,7 +515,7 @@
   "WarnNonVisibleToken": "Questo combattente non è visibile.",
 
   "FIELDS": {
-    "actorId.label": "Attore rappresentato",
+    "actorId.label": "Personaggio rappresentato",
     "tokenId.label": "Token rappresentato",
     "name.label": "Nome visualizzato",
     "defeated.label": "Sconfitto",
@@ -1516,7 +1516,7 @@
   "ToFrontOrBack": "In primo piano / sullo sfondo",
   "TilePlay": "Riproduci Video",
   "TilePause": "Pausa Video",
-  "WarningEffectNoActor": "Non puoi assegnare effetti di stato a un token senza un attore associato."
+  "WarningEffectNoActor": "Non puoi assegnare effetti di stato a un token senza un personaggio associato."
 },
 
 "HTMLDocumentTagsElement.PLACEHOLDER": "Inserisci UUID o rilascia {type}",
@@ -3070,7 +3070,7 @@
     "overhaul": "Revisioni o suite di funzionalità",
     "paid-features": "Contiene funzionalità a pagamento",
     "patches": "Patch o correzioni di bug",
-    "sheets": "Schede di Attori e Oggetti",
+    "sheets": "Schede di Personaggi e Oggetti",
     "tools": "Strumenti e controlli",
     "translation": "Traduzione e localizzazione",
     "visuals": "Effetti visivi",
@@ -3133,18 +3133,18 @@
     "Information": "Informazione"
   },
   "ACTIONS": {
-    "AddAuthor": "Add Author",
-    "RemoveAuthor": "Remove Author",
-    "AddPack": "Add Compendium Pack",
-    "RemovePack": "Remove Compendium Pack",
-    "AddRelationship": "Add Relationship",
-    "RemoveRelationship": "Remove Relationship"
+    "AddAuthor": "Aggiungi autore",
+    "RemoveAuthor": "Rimuovi autore",
+    "AddPack": "Aggiungi pacchetto Compendio",
+    "RemovePack": "Rimuovi pacchetto Compendio",
+    "AddRelationship": "Aggiungi relazione",
+    "RemoveRelationship": "Rimuovi relazione"
   },
   "TABS": {
-    "basics": "Basic Details",
-    "authors": "Authors",
-    "packs": "Compendium Packs",
-    "relationships": "Relationships"
+    "basics": "Dettagli Base",
+    "authors": "Autori",
+    "packs": "Pacchetti Compendio",
+    "relationships": "Relazioni"
   },
   "FIELDS": {
     "id": {
@@ -3186,7 +3186,7 @@
       "type.label": "Tipo Documento",
       "system": {
         "label": "Sistema Richiesto",
-        "hint": "I Compendi di Personaggi, Oggetti o Avventure (che contengono Attori o Oggetti) devono dichiarare per quale sistema di gioco specifico sono progettati."
+        "hint": "I Compendi di Personaggi, Oggetti o Avventure (che contengono Personaggi o Oggetti) devono dichiarare per quale sistema di gioco specifico sono progettati."
       }
      }
     },
@@ -3204,8 +3204,8 @@
   "All": "Tutto",
   "Reset": "Ripristina Predefiniti",
   "Filter": "Filtro",
-  "Core": "Core",
-  "Unmapped": "Unmapped",
+  "Core": "Principale",
+  "Unmapped": "Non Mappato",
   "TABS": {
     "core": "Principale",
     "unmapped": "Non Mappato"
@@ -4199,7 +4199,7 @@
 "TOKEN.ResourceBar2D": "Dati barra 2",
 "TOKEN.TitlePrototype": "Token prototipo",
 "TOKEN.Update": "Aggiorna Token",
-"TOKEN.WarningNoActor": "Questo Token fa riferimento a un Attore che non esiste più nel Mondo.",
+"TOKEN.WarningNoActor": "Questo Token fa riferimento a un personaggio che non esiste più nel Mondo.",
 "TOKEN.WarningNoVision": "Non c’è alcun Token in questa Scena che ti consenta di vedere l’area.",
 "TOKEN.PROTOTYPE": {
   "OverridesWarning": "Questo campo è definito dalle Sostituzioni del Token Prototipo e non può essere modificato direttamente."
@@ -4236,8 +4236,8 @@
   "level.label": "Livello",
   "movementAction.label": "Azione di movimento",
   "movementAction.hint": "Quando è selezionato Default, l'azione di movimento viene automaticamente determinata per questo Token.",
-  "actorId.label": "Attore rappresentato",
-  "actorLink.label": "Collega dati Attore",
+  "actorId.label": "Personaggio rappresentato",
+  "actorLink.label": "Collega dati Personaggio",
   "displayName.label": "Mostra nome",
   "appendNumber": {
     "label": "Aggiungi numero incrementale",
@@ -4652,7 +4652,7 @@
     },
     "character": {
       "label": "Personaggio giocatore",
-      "hint": "Seleziona un Attore su cui hai almeno permesso di OSSERVATORE che rappresenta il personaggio principale di questo utente."
+      "hint": "Seleziona un personaggio su cui hai almeno permesso di OSSERVATORE che rappresenta il personaggio principale di questo utente."
     }
   },
   "SHEET": {
@@ -4662,7 +4662,7 @@
     },
     "BUTTONS": {
       "SAVE": "Salva configurazione giocatore",
-      "RELEASE": "Rilascia personaggio"
+      "RELEASE": "Rilascia Personaggio"
     }
   },
   "MESSAGES": {
