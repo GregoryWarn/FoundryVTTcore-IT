@@ -642,7 +642,7 @@
 "DrawingRect": "Rettangolo",
 "DrawingEllipse": "Ellisse",
 "DrawingPoly": "Poligono",
-"DrawingPolyP": "<span class=\"reference\">Click + Trascina</span> per iniziare, poi <span class=\"reference\">Click</span> per aggiungere punti. <span class=\"reference\">Doppio Click</span> per finire.",
+"DrawingPolyP": "<span class=\"reference\">Click + Trascina</span> per iniziare, poi <span class=\"reference\">Click</span> per aggiungere punti. <span class=\"reference\">Tasto Destro</span> per rimuovere l'ultimo punto. <span class=\"reference\">Doppio Click</span> per finire.",
 "DrawingFree": "Mano Libera",
 "DrawingText": "Testo",
 "DrawingClear": "Cancella Disegni",
@@ -711,6 +711,8 @@
 "RegionCone": "Disegna Cono",
 "RegionLine": "Disegna Linea",
 "RegionPolygon": "Disegna Poligono",
+"RegionGrid": "Disegna gli spazi della griglia",
+"RegionGridP": "<span class=\"reference\">Clicca</span> per aggiungere spazi alla griglia. <span class=\"reference\">Click destro</span> per rimuovere l'ultimo spazio aggiunto. <span class=\"reference\">Doppio click</span> per terminare.",
 "RegionHole": "Crea Buchi",
 "RegionHoleP": "Quando attiva, qualsiasi forma disegnata su una Regione usando uno degli strumenti forma creerà un buco in cui i comportamenti della Regione non verranno applicati.",
 "RegionSnap": "Quando attivo, qualsiasi forma disegnata su una Regione usando uno degli strumenti forma verrà agganciata alla griglia.",
@@ -1468,17 +1470,20 @@
 
 "INFO.SceneViewCanvasDisabled": "La scena \"{name}\" è ora visualizzata ma non viene mostrata perché il Canvas del gioco è disabilitato.",
 
-"INVITATIONS.Copied": "Link di invito al gioco copiato negli appunti",
-"INVITATIONS.Instructions": "Condividi i link qui sotto con gli utenti che desideri partecipino al gioco. Usa il link contrassegnato come 'Rete Locale' per gli utenti all'interno della tua rete, usa invece il link 'Internet' per gli utenti che accedono dall'esterno sulla porta configurata.",
-"INVITATIONS.Internet": "Internet",
-"INVITATIONS.InternetV6": "Internet (IPv6)",
-"INVITATIONS.Local": "Rete Locale",
-"INVITATIONS.Title": "Link di Invito al Gioco",
-"INVITATIONS.OpenConnection": "La tua connessione sembra essere aperta",
-"INVITATIONS.ClosedConnection": "La tua connessione sembra essere chiusa",
-"INVITATIONS.UnknownConnection": "Non siamo riusciti a rilevare lo stato della tua connessione",
-"INVITATIONS.DiscoveryFailed": "Il nostro servizio di rilevamento IP non è riuscito a identificare il tuo indirizzo IP corretto, stai usando IPv6 o non sei attualmente connesso a Internet.",
-
+"INVITATIONS": {
+  "Copied": "Link di invito alla partita copiato negli appunti",
+  "Instructions": "Condividi i link di invito riportati di seguito con gli utenti che desideri invitare alla tua partita. Il link di invito alla rete locale è destinato agli utenti connessi alla tua rete locale, mentre il link Internet consente la connessione tramite Internet sulla porta configurata.",
+  "Internet": "Internet (IPv4)",
+  "InternetV6": "Internet (IPv6)",
+  "Local": "Rete locale",
+  "Recheck": "Verifica nuovamente la connettività",
+  "Title": "Link di invito alla partita",
+  "OpenConnection": "La tua connessione risulta aperta",
+  "ClosedConnection": "La tua connessione risulta chiusa",
+  "UnknownConnection": "Impossibile rilevare lo stato della tua connessione",
+  "DiscoveryFailed": "Il servizio di rilevamento dell'indirizzo IP non è riuscito a identificare il tuo indirizzo IP corretto. Potresti utilizzare IPv6 oppure non essere attualmente connesso a Internet."
+},
+  
 "ITEM.ViewArt": "Visualizza Immagine Oggetto",
 
 "HOTBAR": {
@@ -2364,7 +2369,7 @@
       "SelfSigned": "Non è stato possibile ottenere un certificato da Let's Encrypt, pertanto è stato emesso un certificato autofirmato: {error}",
       "Title": "Genera automaticamente il certificato",
       "Tooltip": "Genera automaticamente (o rigenera) i certificati SSL e le relative chiavi.",
-      "Trusted": "È stato ottenuto un certificato attendibile, che verrà rinnovato automaticamente. Salva le impostazioni e riavvia il server per applicare le modifiche.",
+      "Trusted": "È stato ottenuto un certificato attendibile, che verrà rinnovato automaticamente. Riavvia il server per applicare le modifiche.",
       "Unlock": {
         "Title": "Interrompi il rinnovo automatico",
         "Tooltip": "Interrompe la gestione automatica di questo certificato.",
@@ -3861,7 +3866,7 @@
 },
 
 "SIDEBAR.COMPENDIUM.LABELS": {
-  "Ownership": "Proprietà non predefinita",
+  "Ownership": "Nascosto ai giocatori",
   "Locked": "Bloccato"
 },
 
@@ -3881,6 +3886,8 @@
     "Visible": "Visibile"
   },
   "Categories": {
+    "Player": "Proprietà del Giocatore",
+    "Gamemaster": "Proprietà del GM",
     "NoAuthor": "Nessun autore",
     "NoLevel": "Nessun livello"
   },
@@ -4653,22 +4660,35 @@
     "character": {
       "label": "Personaggio giocatore",
       "hint": "Seleziona un personaggio su cui hai almeno permesso di OSSERVATORE che rappresenta il personaggio principale di questo utente."
+    },
+    "password": {
+      "label": "Password Giocatore",
+      "hint": "La modifica della password di questo utente comporterà la disconnessione di tutte le sessioni attualmente associate al suo account."
     }
   },
   "SHEET": {
     "HEADERS": {
       "INFO": "Informazioni giocatore",
-      "CHAR": "Personaggio giocatore"
+      "CHAR": "Personaggio giocatore",
+      "PASS": "Modifica Password"
     },
-    "BUTTONS": {
-      "SAVE": "Salva configurazione giocatore",
-      "RELEASE": "Rilascia Personaggio"
-    }
+    "PASSWORD": {
+      "Current": "Password (Attuale)",
+      "New": "Password (Nuova)",
+      "Wipe": {
+        "label": "Rimuovi",
+        "hint": "Rimuove la password attuale invece di impostarne una nuova."
+      }
+    },
+    "Submit": "Salva Configurazione Giocatore"
   },
   "MESSAGES": {
     "KICKED": "L’utente {user} è stato <strong>espulso</strong> dal mondo.",
     "BANNED": "L’utente {user} è stato <strong>bannato</strong> dal mondo.",
     "UNBANNED": "L’utente {user} è stato <strong>sbannato</strong> dal mondo."
+  },
+  "ACTIONS": {
+    "releaseCharacter": "Rilascia Personaggio"
   },
   "RoleNone": "Nessuno",
   "RolePlayer": "Giocatore",
