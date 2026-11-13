@@ -395,9 +395,9 @@
   "PrivateRollContent": "{user} ha tirato i dadi in privato",
   "UnknownUser": "Utente sconosciuto",
   "MODES": {
-    "blind": "Nascosto ai Game Master",
-    "gm": "Privato ai Game Master",
-    "ic": "Pubblico come Personaggio",
+    "blind": "Nascosto (solo GM)",
+    "gm": "Privato al GM",
+    "ic": "Pubblico come PG",
     "public": "Pubblico come Utente",
     "self": "Solo per sé"
   }
