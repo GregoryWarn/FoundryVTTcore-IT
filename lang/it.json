@@ -199,7 +199,10 @@
     "ToggleControls": "Mostra/Nascondi Controlli",
     "Close": "Chiudi Finestra"
   },
-  "IMAGE_POPOUT.AltText": "Un'immagine in evidenza: il soggetto non è noto."
+  "IMAGE_POPOUT.AltText": "Un'immagine in evidenza: il soggetto non è noto.",
+  "DIALOG": {
+    "InputQueryWarning": "Tutto ciò che inserisci qui verrà condiviso con l'utente \"<strong>{user}</strong>\". Fai attenzione a non condividere informazioni sensibili."
+  }
 },
 
 "AUDIO": {
@@ -600,6 +603,7 @@
   "CannotViewWarning": "Non hai i permessi necessari per visualizzare questo compendio.",
   "ModifyLocked": "Non puoi modificare il contenuto di questo compendio perché è bloccato.",
   "ModifyPermissionDenied": "Non hai i permessi necessari per modificare questo compendio.",
+  "CreatePermissionDenied": "Non hai i permessi necessari per creare un compendio.",
   "OwnershipInheritBelow": "Eredita dal livello inferiore",
   "OwnershipReset": "Ripristina predefinito",
   "ART": {
@@ -1242,6 +1246,7 @@
   "NoWebGL2": "Il tuo browser attualmente non supporta il rendering WebGL Versione 2 che è essenziale per il corretto funzionamento di Foundry VTT. Possono verificarsi errori o comportamenti grafici anomali.",
   "BackgroundTextureSize": "Stai utilizzando un’immagine di sfondo della scena con dimensioni {width} px per {height} px. Una o entrambe queste dimensioni superano la dimensione massima dell’immagine di {max} px supportata dal tuo dispositivo.",
   "InvalidAdminCredentials": "L'username o la password dell'amministratore del server non sono validi. Se hai dimenticato le credenziali configurate dovrai eliminare manualmente il file <strong>Config/admin.txt</strong>dalla posizione dei dati dell'utente.",
+  "TooManyAdminAttempts": "Troppi tentativi di accesso non riusciti come amministratore del server. Riprova tra qualche minuto.",
   "LoadPackages": "La richiesta di connessione al server di Foundry per elencare i pacchetti esistenti non è riuscita. Assicurarsi che l'applicazione consenta connessioni in uscita.",
   "NoTargetUsersForWhisper": "Non esistono utenti target per questo messaggio sussurrato. Controlla la correttezza oppure prova \"/w [Nome utente]\".",
   "CantWhisper": "Non sei autorizzato a inviare messaggi di chat sussurrati agli atri utenti.",
@@ -1825,7 +1830,17 @@
   "UnlockBar": "Sblocca hotbar",
   "EmptySlot": "Slot vuoto {slot}",
   "CannotOverwrite": "Impossibile sovrascrivere macro: hotbar bloccata.",
+  "AuthoredBy": "di",
+  "APPROVAL": {
+    "Approve": "Approva macro",
+    "Required": "La macro \"{name}\" deve essere approvata da un Gamemaster prima di poter essere eseguita.",
+    "Risk": "Uno script malevolo potrebbe modificare o eliminare qualsiasi dato a cui l'utente che lo esegue ha accesso. Approva solo codice che hai esaminato e di cui comprendi il funzionamento.",
+    "Unapproved": "Questa macro contenente uno script deve essere approvata da un Gamemaster prima di poter essere eseguita da altri utenti.",
+    "UnknownAuthor": "un utente sconosciuto",
+    "Warning": "Approvando la macro \"<strong>{name}</strong>\", creata da {author}, consenti a qualsiasi utente autorizzato di eseguirne il codice sul proprio client, inclusi i Gamemaster, senza ulteriori conferme."
+  },
   "FIELDS": {
+    "approver.label": "Approvatore",
     "command.label": "Comando"
   }
 },
@@ -2019,7 +2034,7 @@
 "SCENE.Activate": "Attiva",
 "SCENE.Audio": "Audio",
 "SCENE.BackgroundScale": "Scala Immagine di Sfondo",
-"SCENE.BackgroundScaleHint": "Utilizza MAIUSC+rotellina del mouse o MAIUSC+Freccia su e MAIUSC+Freccia giù per regolare la dimensione dell'immagine di sfondo.",
+"SCENE.BackgroundScaleHint": "Utilizza MAIUSC + rotellina mouse o MAIUSC + Freccia su e MAIUSC + Freccia giù per regolare la dimensione dell'immagine di sfondo.",
 "SCENE.CaptureInitialViewPosition": "Posizione riquadro catturato come vista iniziale nel modulo di configurazione della scena.",
 "SCENE.CurrentLevel": "Livello attuale",
 "SCENE.Darkness": "Oscurità",
@@ -3230,6 +3245,7 @@
 "ErrorMustSelectUser": "Devi selezionare un utente per effettuare l'accesso.",
 "ErrorUserDoesNotExist": "L'utente richiesto, \"{user}\", non esiste.",
 "ErrorInvalidPassword": "Password non valida fornita per {user}!",
+"ErrorTooManyAttempts": "Troppi tentativi di accesso non riusciti per l'utente {user}. Riprova tra qualche minuto.",
 "ErrorBanned": "{user} non ha il permesso di accedere a questo Mondo!",
 "LoginSuccess": "Accesso come {user} riuscito, iniziamo!",
 "WorldPendingSetup": "Questo mondo non è ancora pronto. Attendi che il Game Master effettui l'accesso e completi la configurazione prima di tentare di unirti."
@@ -3345,7 +3361,7 @@
 "PERMISSION.JournalCreate": "Crea Voci Diario",
 "PERMISSION.JournalCreateHint": "Consenti agli utenti con questo ruolo di creare nuove voci nella barra laterale Voci Diario.",
 "PERMISSION.MacroScript": "Utilizza Script Macro",
-"PERMISSION.MacroScriptHint": "Consenti agli utenti con questo ruolo di utilizzare macro JavaScript con accesso alle API.",
+"PERMISSION.MacroScriptHint": "Consente agli utenti con questo ruolo di creare, modificare ed eliminare macro JavaScript che accedono alle API di Foundry VTT e di eseguire i comportamenti delle regioni basati su script.",
 "PERMISSION.ManualRolls": "Effettua Tiri Manuali",
 "PERMISSION.ManualRollsHint": "Consenti agli utenti con questo ruolo la possibilità di inserire manualmente i tiri.",
 "PERMISSION.MessageWhisper": "Invia Messaggi Privati",
@@ -3895,6 +3911,8 @@
     "empty": "Vuoto",
     "visible": "Visibile ad alcuni giocatori",
     "hidden": "Nascosto ai giocatori",
+    "attachedToToken": "Associato a un token",
+    "attachedToHiddenToken": "Associato a un token nascosto",
     "locked": "Bloccato"
   },
   "Filter": {
